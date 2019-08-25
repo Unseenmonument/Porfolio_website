@@ -1,0 +1,315 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ 
+ */
+
+@import "bootstrap";
+
+.canvas {
+	max-width: 100%;
+}
+
+.arrowdown {
+	top: 0;
+	margin-top: 0;
+	padding-yop: 0;
+	width: 100vw;
+	height: 0;
+	border-style: solid;
+	border-width: 100px 49.3vw 0 49.3vw;
+	border-color: #FAE3BA transparent transparent transparent;
+	max-width: 100%;
+}
+
+.outter-card {
+	background-color: #4c5769;
+	width: 1050px;
+	height: 250px;
+	margin: auto;
+}
+
+//
+// All the sections of the site
+//
+
+.body {
+	background-color: #025952;
+}
+
+.meat {
+	margin: auto;
+	width: 80vw;
+	height: 50vh;
+}
+
+#a1 {
+	background-color: #FAE3BA;
+	min-height: 500px;
+	width: 100vw;
+	max-width: 100%;
+}
+
+#a2 {
+	background-color: #fcd48d;
+	min-height: 500px;
+	width: 100vw;
+	max-width: 100%;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+#a3 {
+	background-color: #FAE3BA;
+	min-height: 500px;
+	width: 100vw;
+	max-width: 100%;
+}
+
+#a4 {
+	background-color: #03998d;
+	min-height: 500px;
+//	width: 100vw;
+	max-width: 100%;
+}
+
+//
+// Elements in the canvas
+//
+
+.intro_name_bg {
+	position: absolute;
+	top: 50%;
+	transform: translate(-60%, -60%);
+	left: 55vw;
+	text-align: center;
+	color: #ffffff;
+	background-color: #312a38;
+	letter-spacing: 5px;
+	opacity: .8;
+	
+	width: 85vh;
+	height: 10vh;
+	border: 18px solid #312a38;
+	padding: 3px;
+	padding-left: 3px;
+}
+
+.intro_name {
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	text-align: center;
+	color: #ffffff;
+	background-color: #312a38;
+	letter-spacing: 5px;
+
+	width: 85vh;	
+	border: 18px solid #312a38;
+	padding: 3px;
+	padding-left: 3px;
+}
+
+//
+// The Navigation Bar
+//
+.about_bar {
+	background-color: #F27B35;
+	font-size: 30px;
+	border-bottom: 10px solid #F1523E;
+}
+
+.about {
+	text-align: center;
+	width: 15vw;
+	color: #fffaf5;
+	transition: 0.9s;
+}
+.about:hover {
+	background-color: #15301c;
+	cursor: pointer;
+}
+
+//
+// Section One: About Me
+//
+
+#intro {
+	text-align: center;
+//	padding-top: 50px;
+//	padding-bottom: 100px;
+//	height: 50px;
+	margin: auto;
+	width: 70%;
+}
+
+//
+// Section Two: My Skills
+//
+
+
+.circle { border-radius: 50%;}
+.c1 {
+//    background-color: #ffbb84;
+    background-color: #fc866f;
+    width: 450px;
+    height: 450px;
+    position: relative;
+    left: 32%;
+}
+
+.c2 {
+    background-color: #64ba44;
+    transform: translate(-50%, -50%);
+    top: 50%; 
+    left: 50%;
+    width: 95%;
+    height: 95%;
+    position: relative;
+}
+
+.c3 {
+//    background-color: #d4aae0;
+    background-color: #9bc9f2;
+    transform: translate(-50%, -50%);
+    top: 50%; 
+    left: 50%;
+    width: 93%;
+    height: 93%;
+    position: relative;
+}
+
+
+
+
+.skill-name {
+	background-color: red;
+	text-align: center;
+	margin-left: 0;
+	height: 25px;
+	padding-left: 0;
+	position: absolute;
+	width: 150px;
+	left: 0;
+}
+
+.full-skill-bar {
+	background-color: #F27B35;
+	width: 500px;
+	height: 25px;
+	overflow-y: hidden;
+	margin-left: 0;
+	padding-left: 0;
+	clip-path: border-box;
+}
+
+.skill-level {
+	height: 25px; 
+	position: absolute;
+	background-color: #fdff94;
+	display: inline-block;
+	left: 0;
+}
+
+.slide-bar {
+    left: -300px;
+    animation: slide 1.5s forwards;
+    animation-delay: 2s;
+}
+
+.skill-percent {
+	right: 0;
+	height: 25px;
+	background-color: blue;
+	padding-right: 15px;
+	padding-left: 15px;
+	color: white;
+	display: inline-block;
+	position: absolute;
+	text-align: center;
+}
+
+.a1content {
+	margin: auto;
+}
+
+.skill {
+	margin: auto;
+	padding-bottom: 15px;
+	overflow: hidden;
+}
+
+.slide {
+	position: relative;
+    left: -8200px;
+    width: 100vw;
+    animation: slide 1.5s forwards;
+    animation-delay: 2s;
+}
+
+//
+// Section 4: The Contact Form
+//
+
+.myform {
+	margin: auto;
+}
+
+.circle {
+	border-radius: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    border: 2px solid red;
+}
+
+.about_pics {
+	margin: auto;
+}
+
+
+
+//
+// The Animation's Section
+//
+
+@keyframes slide {
+	100% { left: 0; }
+}
+
+//
+// Section Three: Git Portfolios
+//
+
+.gitbox1 {
+	
+}
+
+.gitbox2 {
+	
+}
+
+.gitbox3 {
+	
+}
+
+.gitbox3 {
+	
+}
+
+.gitbox4 {
+	
+}

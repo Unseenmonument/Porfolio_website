@@ -1,0 +1,47 @@
+<%= form_with(model: @contact, local: false,) do |form| %>
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fan.errors.count, "error") %> prohibited this fan from being saved:</h2>
+
+      <ul>
+      <% fan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :company %>
+    <%= form.text_field :country, id: :contact_company %>
+  </div>
+
+  <div class="field">
+    <%= form.label :f_name %>
+    <%= form.text_field :f_name, id: :contact_f_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :l_name %>
+    <%= form.text_field :l_name, id: :contact_l_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reason %>
+    <%= form.text_area :reason, id: :contact_reason %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.number_field :email, id: :contact_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.number_field :phone, id: :contact_phone %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
