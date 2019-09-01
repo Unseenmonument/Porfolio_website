@@ -17,9 +17,28 @@
 //= require bootstrap
 //= require turbolinks
 //= reqire webdesign
+//= require mixitup
 //= require_tree .
 
+
+
 $( document ).ready(function() {
+
+	// mixitup code
+	var mixer = mixitup('.container');
+	var mixer = mixitup(containerEl);
+	var mixer = mixitup(containerEl, {
+	    selectors: {
+	        target: '.mix'
+	    },
+	    animation: {
+	        duration: 300,
+	        clampWidth: false,
+	        clampHeight: false,
+	    }
+	});
+
+	// end of mixitup code
 
 	$('.projects').hide();
 	$('.about_pics').hide();
@@ -31,7 +50,7 @@ $( document ).ready(function() {
 //		$('.about2').fadeIn();
 //		$('.about3').fadeIn();
 //		$('.about4').fadeIn();
-	})
+	});
 
 
 
@@ -48,5 +67,19 @@ $( document ).ready(function() {
 	    setTimeout(typeWriter, speed);
 	  }
 	}
+
+	$('.red_button').hover(function() {
+		$('.red').toggle();
+	});
+
+	$('.gitbox1').hide();
+	$('.gitbox2').click(function() {
+		$('.gitbox1').toggle('scale');
+		$('.gitbox3').toggle('scale');
+    });		
+
+//	$('.gitbox2').click(function() {
+//		$('.gitbox1').toggleClass('animate');
+//    });
 
 });

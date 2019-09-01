@@ -157,6 +157,15 @@
 // Section Two: My Skills
 //
 
+.kerron_circle {
+    border-radius: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    width: 92%;
+    height: 92%;
+    top: 50%;
+    left: 50%;
+}
 
 .circle { border-radius: 50%;}
 .c1 {
@@ -188,9 +197,6 @@
     height: 93%;
     position: relative;
 }
-
-
-
 
 .skill-name {
 	background-color: red;
@@ -240,6 +246,10 @@
 }
 
 .a1content {
+	margin: auto;
+}
+
+.a3content {
 	margin: auto;
 }
 
@@ -294,22 +304,51 @@
 // Section Three: Git Portfolios
 //
 
+
+.row {
+	position: relative;
+	margin: auto;
+//	left: 50%;
+//	transform: translate(-50%);
+}
+
 .gitbox1 {
-	
+//	margin: auto;
+	background-color: red;
+	height: 300px;
+	width: 300px;
+	display: inline-block;
 }
 
 .gitbox2 {
-	
+//	margin: auto;
+	background-color: blue;
+	height: 300px;
+	width: 300px;
+	display: inline-block;
 }
 
 .gitbox3 {
-	
-}
-
-.gitbox3 {
-	
+//	margin: auto;
+	background-color: green;
+	height: 300px;
+	width: 300px;
+	display: inline-block;
 }
 
 .gitbox4 {
-	
+//	margin: auto;
+	background-color: white;
+	height: 300px;
+	width: 300px;
+	display: inline-block;
 }
+
+.gitbox5 {
+//	margin: auto;
+	background-color: black;
+	height: 300px;
+	width: 300px;
+	display: inline-block;
+}
+

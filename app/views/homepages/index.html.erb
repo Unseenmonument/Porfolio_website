@@ -40,7 +40,13 @@
 		<div class="a1content col-sm-9 flex"> 
 			<div class="row">
 				<div class="col-sm-3">
-					<h1>Placeholder!</h1>
+					<div class="c1 circle shapeborder">
+						<div class="c2 circle">
+							<div class="c3 circle">	
+								<%= image_tag("kerron.jpg", :class => "kerron_circle") %>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="col-sm-6 skill">
 					<% @skills.each do |skill| %>
@@ -63,7 +69,41 @@
 	</div>
 
 	<div id="a3">
-		
+		<div class="a3content col-sm-12">
+
+			<ul>
+				<li class="all button" data-filter="all">all</li>
+				<li class="blue_button" data-filter=".blue">blue</li>
+				<li class="red_button" data-filter=".red">red</li>
+				<li class="white_button" data-filter=".white">white</li>
+				<li class="green_button" data-filter=".green">green</li>
+				<li class="orange_button" data-filter=".orange">orange</li>
+				<li class="orange_button" data-filter=".gold">gold</li>				
+			</ul>
+
+			<div class="container">
+				<div class="row justify-content-center">
+				
+						<div class="col-md-3 gitbox5 mix red">
+						</div>
+						<div class="col-md-3 gitbox2 mix red">
+						</div>
+						<div class="col-md-3 gitbox1 mix red gold">
+						</div>
+						<div class="col-md-3 gitbox2 mix blue gold">
+						</div>
+						<div class="col-md-3 gitbox1 mix green gold">
+						</div>
+						<div class="col-md-3 gitbox3 mix orange gold">
+						</div>
+						<div class="col-md-3 gitbox2 mix white gold">
+						</div>
+						<div class="col-md-3 gitbox4 mix white gold">
+						</div>
+					
+				</div>
+			</div>
+		</div>		
 
 	</div>
 	<div id="a4">
@@ -85,23 +125,3 @@
 		</div>
 
 	</div>
-	
-	
-
-	<!-- 
-		<% @skills.each do |skill| %>
-			<div class="row skill">
-				<div class="skill-bar"> 
-					<span>
-						<p style="margin-top: 15px; display: inline-block; margin-left: 15px;">
-							<%= skill.name %>
-						</p>
-					</span> 
-					<div class="skill-name" style="border-left: 2<%= skill.proficientcy %>px solid #025952;">
-						<p style="margin-top: 15px; margin-right: 30px;">
-							<%= skill.proficientcy %>% 
-						</p>
-					</div>
-				</div>
-			</div>
-		<% end %> -->
