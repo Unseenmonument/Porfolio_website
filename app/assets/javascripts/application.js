@@ -26,8 +26,8 @@ $( document ).ready(function() {
 
 	// mixitup code
 	var mixer = mixitup('.container');
-	var mixer = mixitup(containerEl);
-	var mixer = mixitup(containerEl, {
+//	var mixer = mixitup(containerEl);
+	var mixer = mixitup('.container', {
 	    selectors: {
 	        target: '.mix'
 	    },
@@ -40,8 +40,21 @@ $( document ).ready(function() {
 
 	// end of mixitup code
 
+	//
+	//
+
+	// modal code
+	$('.outer-outer').hide();
+	$('.text_btm').click(function() {
+		$('.outer-outer').fadeIn('slow');
+	});
+	$('.outer').click(function() {
+		$('.outer-outer').fadeOut('slow');
+	});
+	// end of modal code
+
 	$('.projects').hide();
-	$('.about_pics').hide();
+	//$('.about_pics').hide();
 
 
 	$('#a1').hover(function() {
@@ -65,18 +78,15 @@ $( document ).ready(function() {
 	    document.getElementById("intro").innerHTML += txt.charAt(i);
 	    i++;
 	    setTimeout(typeWriter, speed);
-	  }
-	}
+	  };
+	};
 
-	$('.red_button').hover(function() {
-		$('.red').toggle();
-	});
-
-	$('.gitbox1').hide();
+	
+	/* $('.gitbox1').hide();
 	$('.gitbox2').click(function() {
 		$('.gitbox1').toggle('scale');
 		$('.gitbox3').toggle('scale');
-    });		
+    }); */		
 
 //	$('.gitbox2').click(function() {
 //		$('.gitbox1').toggleClass('animate');

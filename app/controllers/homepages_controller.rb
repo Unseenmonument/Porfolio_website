@@ -3,6 +3,7 @@ class HomepagesController < ApplicationController
 	def index
 		@contact = Contact.new
 		@skills = Skill.all
+		@projects = Project.all
 	end
 
 	def create

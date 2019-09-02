@@ -352,3 +352,131 @@
 	display: inline-block;
 }
 
+.top_overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+//  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.mix:hover .top_overlay {
+  bottom: 50%;
+  height: 50%;
+}
+
+.btm_overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+//  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .9s ease;
+  background-color: #90c489;
+}
+
+.mix:hover .overlay {
+	opacity: 1;
+}
+
+.mix:hover .btm_overlay {
+  height: 50%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text_btm {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  border: 3px solid #03998d;
+  top: 50%;
+  left: 50%;
+  padding: 5px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.text_btm:hover {
+	background-color: #03998d;
+
+}
+
+//
+// Modal for the slideshow
+//
+
+/*.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+} */
+
+.outer-outer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+//  background-color: black;
+//  opacity: 0.5;
+  top: 0;
+  left: 0;
+}
+.outer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+}
+
+/* Modal Content */
+.inner-content {
+  position: relative;
+  background-color: white;
+  margin: auto;
+  padding: 25px;
+  width: 500px;
+  height: 400px
+  }

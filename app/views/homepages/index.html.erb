@@ -83,24 +83,91 @@
 
 			<div class="container">
 				<div class="row justify-content-center">
-				
+						<% @projects.each do |project| %>
 						<div class="col-md-3 gitbox5 mix red">
+							<div class="overlay">
+								<div class="top_overlay">
+								    <div class="text">
+								    	<h2><%= project.name %></h2>
+								    	<h3><%= project.language %></h3>	
+								    	</div>
+							  	</div>
+							    <div class="btm_overlay">
+								    <div class="text_btm">Learn More</div>
+								</div>
+							</div>
 						</div>
-						<div class="col-md-3 gitbox2 mix red">
+						<% end %>
+<!--						<div class="col-md-3 gitbox2 mix red">
+							<div class="overlay">
+								<div class="top_overlay">
+								    <div class="text">Hello World</div>
+							  	</div>
+							    <div class="btm_overlay">
+									<button class="text_btm" data-toggle="modal" data-target="#myModal">Hello Again</button>
+								</div>
+							</div>
 						</div>
 						<div class="col-md-3 gitbox1 mix red gold">
+							<div class="overlay">
+								<div class="top_overlay">
+								    <div class="text">Hello World</div>
+							  	</div>
+							    <div class="btm_overlay">
+								    <button class="text_btm" data-toggle="modal" data-target="#myModal">Hello Again</button>
+								</div>
+							</div>
 						</div>
 						<div class="col-md-3 gitbox2 mix blue gold">
+							<div class="overlay">
+								<div class="top_overlay">
+								    <div class="text">Hello World</div>
+							  	</div>
+							    <div class="btm_overlay">
+								    <button class="text_btm" data-toggle="modal" data-target="#myModal">Hello Again</button>
+								</div>
+							</div>
 						</div>
 						<div class="col-md-3 gitbox1 mix green gold">
+							<div class="overlay">
+								<div class="top_overlay">
+								    <div class="text">Hello World</div>
+							  	</div>
+							    <div class="btm_overlay">
+								    <button class="text_btm" data-toggle="modal" data-target="#myModal">Hello Again</button>
+								</div>
+							</div>
 						</div>
 						<div class="col-md-3 gitbox3 mix orange gold">
+							<div class="overlay">
+								<div class="top_overlay">
+								    <div class="text">Hello World</div>
+							  	</div>
+							    <div class="btm_overlay">
+								    <button class="text_btm" data-toggle="modal" data-target="#myModal">Hello Again</button>
+								</div>
+							</div>
 						</div>
 						<div class="col-md-3 gitbox2 mix white gold">
+							<div class="overlay">
+								<div class="top_overlay">
+								    <div class="text">Hello World</div>
+							  	</div>
+							    <div class="btm_overlay">
+								    <button class="text_btm" data-toggle="modal" data-target="#myModal">Hello Again</button>
+								</div>
+							</div>
 						</div>
 						<div class="col-md-3 gitbox4 mix white gold">
-						</div>
-					
+							<div class="overlay">
+								<div class="top_overlay">
+								    <div class="text">Hello World</div>
+							  	</div>
+							    <div class="btm_overlay">
+								    <button class="text_btm" data-toggle="modal" data-target="#myModal">Hello Again</button>
+								</div>
+							</div>
+						</div> -->
 				</div>
 			</div>
 		</div>		
@@ -125,3 +192,14 @@
 		</div>
 
 	</div>
+
+
+<!-- Modal Content -->
+<div class="outer-outer"> hello
+	<div class="outer">	
+	</div>
+	<div class="inner-content">
+			<h1>is anyone alive out there?</h1>
+
+	</div>
+</div>
