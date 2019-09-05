@@ -272,8 +272,51 @@
 //
 
 .myform {
-	margin: auto;
+	margin-left: 50%;
+	transform: translate(-35%);
+	margin-bottom: 100px;
 }
+
+.myform-info {
+	height: 30px;
+	width: 350px;
+	padding-left: 10px;
+	margin-bottom: 12px;
+}
+
+.myform-why {
+	height: 30px;
+	width: 450px;
+	padding-left: 10px;
+	margin-bottom: 12px;
+}
+
+.myform-text {
+	width: 450px;
+	height: 90px;
+	padding-left: 10px;
+	margin-bottom: 12px;
+}
+
+.myform-mail {
+	height: 30px;
+	width: 200px;
+	padding-left: 10px;
+	margin-bottom: 12px;
+}
+
+.meetme {
+	margin: auto;
+	text-align: center;
+}
+
+.myform-button {
+	
+}
+
+//
+//
+//
 
 .circle {
 	border-radius: 50%;
@@ -479,4 +522,46 @@
   padding: 25px;
   width: 500px;
   height: 400px
+  }
+
+  //
+  //
+  //
+
+  //
+  // Social Media
+  //
+
+  .social-media{
+  background-color: #3b453a;
+  margin: 0;
+  height: 600px;
+  }
+
+  .social {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  margin: auto;
+  margin-right: 50px;
+  margin-left: 0;
+  overflow: hidden;
+  transition: .5s;
+  }
+
+  .social-hover {
+  tansform: translateY(-100%);
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  }
+
+  .social-hover {
+  height: 0px;
+  width: 100px;
+  background-color: green;
+  }
+
+  .social-row {
+  	margin: auto;
   }

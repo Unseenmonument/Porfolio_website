@@ -83,7 +83,7 @@
 
 			<div class="container">
 				<div class="row justify-content-center">
-						<% @projects.each do |project| %>
+					<% @projects.each do |project| %>
 						<div class="col-md-3 gitbox5 mix red">
 							<div class="overlay">
 								<div class="top_overlay">
@@ -92,82 +92,24 @@
 								    	<h3><%= project.language %></h3>	
 								    	</div>
 							  	</div>
-							    <div class="btm_overlay">
+							    <div id="<%= project.id %>" class="btm_overlay">
 								    <div class="text_btm">Learn More</div>
 								</div>
 							</div>
 						</div>
-						<% end %>
-<!--						<div class="col-md-3 gitbox2 mix red">
-							<div class="overlay">
-								<div class="top_overlay">
-								    <div class="text">Hello World</div>
-							  	</div>
-							    <div class="btm_overlay">
-									<button class="text_btm" data-toggle="modal" data-target="#myModal">Hello Again</button>
-								</div>
+					<% end %>
+					<% @projects.each do |project| %>
+						<!-- Modal Content -->
+						<div id="modal<%= project.id %>" class="outer-outer">
+							<div class="outer"></div>
+							<div class="inner-content">
+								<p><%= project.id %></p>
+								<h1><%= project.name %></h1>
+								<h3><%= project.description %></h3>
+								<a href="<%= project.link %>">View Code</a>
 							</div>
 						</div>
-						<div class="col-md-3 gitbox1 mix red gold">
-							<div class="overlay">
-								<div class="top_overlay">
-								    <div class="text">Hello World</div>
-							  	</div>
-							    <div class="btm_overlay">
-								    <button class="text_btm" data-toggle="modal" data-target="#myModal">Hello Again</button>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 gitbox2 mix blue gold">
-							<div class="overlay">
-								<div class="top_overlay">
-								    <div class="text">Hello World</div>
-							  	</div>
-							    <div class="btm_overlay">
-								    <button class="text_btm" data-toggle="modal" data-target="#myModal">Hello Again</button>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 gitbox1 mix green gold">
-							<div class="overlay">
-								<div class="top_overlay">
-								    <div class="text">Hello World</div>
-							  	</div>
-							    <div class="btm_overlay">
-								    <button class="text_btm" data-toggle="modal" data-target="#myModal">Hello Again</button>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 gitbox3 mix orange gold">
-							<div class="overlay">
-								<div class="top_overlay">
-								    <div class="text">Hello World</div>
-							  	</div>
-							    <div class="btm_overlay">
-								    <button class="text_btm" data-toggle="modal" data-target="#myModal">Hello Again</button>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 gitbox2 mix white gold">
-							<div class="overlay">
-								<div class="top_overlay">
-								    <div class="text">Hello World</div>
-							  	</div>
-							    <div class="btm_overlay">
-								    <button class="text_btm" data-toggle="modal" data-target="#myModal">Hello Again</button>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 gitbox4 mix white gold">
-							<div class="overlay">
-								<div class="top_overlay">
-								    <div class="text">Hello World</div>
-							  	</div>
-							    <div class="btm_overlay">
-								    <button class="text_btm" data-toggle="modal" data-target="#myModal">Hello Again</button>
-								</div>
-							</div>
-						</div> -->
+					<% end %>
 				</div>
 			</div>
 		</div>		
@@ -175,31 +117,22 @@
 	</div>
 	<div id="a4">
 		<div class="arrowdown"></div>
-		<h1>Let's Keep In Touch</h1>
+		
+		<div class="meetme col-sm-5">
+			<h1>Contact</h1>
+			<h3>Let's connect and make something awesome together</h3>
+		</div>
 
-			<!-- <%= render partial: 'homepages/contactform', :contact => @contact %> -->
 		<div class="myform col-sm-5">
 			<%= form_for @contact do |f| %>
-				<p>First Name: <%= f.text_field :f_name %></p>
-				<p>Last Name: <%= f.text_field :l_name %></p>
-				<p>Email: <%= f.text_field :email %></p>
-				<p>Company: <%= f.text_field :company %></p>
-				<p>Reason: <%= f.text_area :reason %></p>
-				<p>Phone: <%= f.text_field :phone %></p>
+				<div><%= f.text_field :f_name, class: 'myform-info', placeholder: "Your Name" %></div>
+				<div><%= f.text_field :company, class: 'myform-info', placeholder: "Company (Not required)" %></div>
+				<div><%= f.select(:reason, options_for_select([['Random Bypasser', 'Random'], ['Job Recruiter','Recruiting'], ['Employer Checking You Out', 'Employer']]), {:prompt => 'What Brings You Here?'}, {:class => 'myform-why'}) %></div>
+				<div><%= f.text_area :l_name, class: 'myform-text', placeholder: 'Want to tell me something?' %></div>
+				<div><%= f.text_field :email, class: 'myform-mail', placeholder: "Email" %></div>
 				  
-				<%= f.submit 'Submit' %>
+				<%= f.submit 'Submit', class: 'myform-button' %>
 			<% end %>
 		</div>
 
 	</div>
-
-
-<!-- Modal Content -->
-<div class="outer-outer"> hello
-	<div class="outer">	
-	</div>
-	<div class="inner-content">
-			<h1>is anyone alive out there?</h1>
-
-	</div>
-</div>

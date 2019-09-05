@@ -46,7 +46,10 @@ $( document ).ready(function() {
 	// modal code
 	$('.outer-outer').hide();
 	$('.text_btm').click(function() {
-		$('.outer-outer').fadeIn('slow');
+		var id = $(this).parent().attr('id');
+		var id2 = "#modal" + id;
+		$(id2).fadeIn('slow');
+//		console.log(id2);
 	});
 	$('.outer').click(function() {
 		$('.outer-outer').fadeOut('slow');
@@ -81,6 +84,23 @@ $( document ).ready(function() {
 	  };
 	};
 
+	//
+	// Social Media Icons
+	//
+
+	$('.social-hover').hide();
+
+	$('.social').mouseenter(function() {
+		$('.social-hover').fadeIn();
+		$('.social').css({"width": "95px", "height": "95px", "transition": "0.3s"});
+		$('.social-hover').css({"width": "95px", "height": "95px", "transform": "translateY(0)", "transition": "0.3s"});
+	});
+
+	$('.social').mouseleave(function() {
+		$('.social').css({"width": "100px", "height": "100px", "transition": "0.3s"});
+		$('.social-hover').css({"width": "100px", "height": "100px", "transform": "translateY(-100%)", "transition": "0.3s"});
+		$('.social-hover').fadeOut();
+	});
 	
 	/* $('.gitbox1').hide();
 	$('.gitbox2').click(function() {
