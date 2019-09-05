@@ -91,15 +91,18 @@ $( document ).ready(function() {
 	$('.social-hover').hide();
 
 	$('.social').mouseenter(function() {
-		$('.social-hover').fadeIn();
-		$('.social').css({"width": "95px", "height": "95px", "transition": "0.3s"});
-		$('.social-hover').css({"width": "95px", "height": "95px", "transform": "translateY(0)", "transition": "0.3s"});
+		$('.social-hover').css({"width": "100px", "height": "100px", "transform": "translateY(-100%)", "transition": "0.01s"});
+//		$(this).removeAttr('style');
+		$('.social-hover').show();
+		$('.social').css({"width": "99px", "height": "99px", "transition": "0.2s"});
+		$('.social-hover').css({"width": "99px", "height": "99px", "transform": "translateY(0)", "transition": "0.2s"});
 	});
 
 	$('.social').mouseleave(function() {
 		$('.social').css({"width": "100px", "height": "100px", "transition": "0.3s"});
-		$('.social-hover').css({"width": "100px", "height": "100px", "transform": "translateY(-100%)", "transition": "0.3s"});
-		$('.social-hover').fadeOut();
+		$('.social-hover').css({"width": "100px", "height": "100px", "transition": "0.3s"});
+		$('.social-hover').fadeOut(300);
+//		$(this).removeAttr('style');
 	});
 	
 	/* $('.gitbox1').hide();
