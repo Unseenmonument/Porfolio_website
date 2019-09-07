@@ -29,6 +29,7 @@
 	border-width: 100px 49.3vw 0 49.3vw;
 	border-color: #FAE3BA transparent transparent transparent;
 	max-width: 100%;
+	margin-bottom: 30px;
 }
 
 .outter-card {
@@ -57,6 +58,8 @@
 	min-height: 500px;
 	width: 100vw;
 	max-width: 100%;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 #a2 {
@@ -64,8 +67,8 @@
 	min-height: 500px;
 	width: 100vw;
 	max-width: 100%;
-	padding-bottom: 0px;
-	margin-bottom: 0px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 #a3 {
@@ -73,12 +76,16 @@
 	min-height: 500px;
 	width: 100vw;
 	max-width: 100%;
+	padding-top: 30px;
+	padding-bottom: 60px;
 }
 
 #a4 {
 	background-color: #03998d;
 	min-height: 500px;
 	max-width: 100%;
+//	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 //
@@ -121,6 +128,7 @@
 //
 // The Navigation Bar
 //
+
 .about_bar {
 	background-color: #F27B35;
 	font-size: 30px;
@@ -139,6 +147,10 @@
 }
 
 //
+//
+//
+
+//
 // Section One: About Me
 //
 
@@ -150,6 +162,10 @@
 	margin: auto;
 	width: 70%;
 }
+
+//
+//
+//
 
 //
 // Section Two: My Skills
@@ -165,14 +181,20 @@
     left: 50%;
 }
 
-.circle { border-radius: 50%;}
-.c1 {
-//    background-color: #ffbb84;
-    background-color: #fc866f;
-    width: 450px;
-    height: 450px;
+.circle {
+	border-radius: 50%;
     position: relative;
-    left: 32%;
+}
+
+.about_pics {
+	margin: auto;
+}
+
+.c1 {
+    background-color: #fc866f;
+    width: 350px;
+    height: 350px;
+    position: relative;
 }
 
 .c2 {
@@ -186,7 +208,6 @@
 }
 
 .c3 {
-//    background-color: #d4aae0;
     background-color: #9bc9f2;
     transform: translate(-50%, -50%);
     top: 50%; 
@@ -195,6 +216,8 @@
     height: 93%;
     position: relative;
 }
+
+// skills
 
 .skill-name {
 	background-color: red;
@@ -316,22 +339,10 @@
 //
 //
 
-.circle {
-	border-radius: 50%;
-    position: relative;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
-    top: 50%;
-    left: 50%;
-    border: 2px solid red;
-}
 
 .about_pics {
 	margin: auto;
 }
-
-
 
 //
 // The Animation's Section
@@ -351,38 +362,6 @@
 	margin: auto;
 //	left: 50%;
 //	transform: translate(-50%);
-}
-
-.gitbox1 {
-//	margin: auto;
-	background-color: red;
-	height: 300px;
-	width: 300px;
-	display: inline-block;
-}
-
-.gitbox2 {
-//	margin: auto;
-	background-color: blue;
-	height: 300px;
-	width: 300px;
-	display: inline-block;
-}
-
-.gitbox3 {
-//	margin: auto;
-	background-color: green;
-	height: 300px;
-	width: 300px;
-	display: inline-block;
-}
-
-.gitbox4 {
-//	margin: auto;
-	background-color: white;
-	height: 300px;
-	width: 300px;
-	display: inline-block;
 }
 
 .gitbox5 {
@@ -532,7 +511,7 @@
 
 .social-media{
 	background-color: #3b453a;
-	height: 600px;
+	height: 300px;
 }
 
 .social {
@@ -557,7 +536,7 @@
   	position: relative;
   	left: 50%;
   	transform: translateX(-25%);
-  	margin-top: 20px; 
+  	padding-top: 20px; 
  }
 
 

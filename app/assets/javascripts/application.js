@@ -24,9 +24,11 @@
 
 $( document ).ready(function() {
 
-	// mixitup code
+//
+// mixitup code
+//
+
 	var mixer = mixitup('.container');
-//	var mixer = mixitup(containerEl);
 	var mixer = mixitup('.container', {
 	    selectors: {
 	        target: '.mix'
@@ -38,23 +40,29 @@ $( document ).ready(function() {
 	    }
 	});
 
-	// end of mixitup code
+//
+// end of mixitup code
+//
 
-	//
-	//
-
-	// modal code
+//
+// modal code
+//
 	$('.outer-outer').hide();
 	$('.text_btm').click(function() {
 		var id = $(this).parent().attr('id');
 		var id2 = "#modal" + id;
 		$(id2).fadeIn('slow');
-//		console.log(id2);
 	});
+
 	$('.outer').click(function() {
 		$('.outer-outer').fadeOut('slow');
 	});
-	// end of modal code
+
+//
+// end of modal code
+//
+
+
 
 	$('.projects').hide();
 	//$('.about_pics').hide();
@@ -84,35 +92,36 @@ $( document ).ready(function() {
 	  };
 	};
 
-	//
-	// Social Media Icons
-	//
+//
+// Social Media Icons
+//
 
 	$('.social-hover').hide();
 
 	$('.social').mouseenter(function() {
-		$('.social-hover').css({"width": "100px", "height": "100px", "transform": "translateY(-100%)", "transition": "0.01s"});
+		var id = $(this).attr('id');
+		var id1 = "#" + id;
+		var id2 = "#" + id + "-hover";
+		console.log(id2);
+		console.log(id1);
+
+		$(id2).css({"width": "100px", "height": "100px", "transform": "translateY(-100%)", "transition": "0.01s"});
 //		$(this).removeAttr('style');
-		$('.social-hover').show();
-		$('.social').css({"width": "99px", "height": "99px", "transition": "0.2s"});
-		$('.social-hover').css({"width": "99px", "height": "99px", "transform": "translateY(0)", "transition": "0.2s"});
+		$(id2).show();
+		$(id1).css({"width": "99px", "height": "99px", "transition": "0.2s"});
+		$(id2).css({"width": "99px", "height": "99px", "transform": "translateY(0)", "transition": "0.2s"});
 	});
 
 	$('.social').mouseleave(function() {
-		$('.social').css({"width": "100px", "height": "100px", "transition": "0.3s"});
-		$('.social-hover').css({"width": "100px", "height": "100px", "transition": "0.3s"});
-		$('.social-hover').fadeOut(300);
+		var id = $(this).attr('id');
+		var id1 = "#" + id;
+		var id2 = "#" + id + "-hover";
+		
+		$(id1).css({"width": "100px", "height": "100px", "transition": "0.3s"});
+		$(id2).css({"width": "100px", "height": "100px", "transition": "0.3s"});
+		$(id2).fadeOut(300);
 //		$(this).removeAttr('style');
 	});
 	
-	/* $('.gitbox1').hide();
-	$('.gitbox2').click(function() {
-		$('.gitbox1').toggle('scale');
-		$('.gitbox3').toggle('scale');
-    }); */		
-
-//	$('.gitbox2').click(function() {
-//		$('.gitbox1').toggleClass('animate');
-//    });
 
 });
