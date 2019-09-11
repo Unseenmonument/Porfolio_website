@@ -96,31 +96,30 @@ $( document ).ready(function() {
 // Social Media Icons
 //
 
-	$('.social-hover').hide();
+//	$('.social-hover').hide();
+//	$('.social-basic').hide();
 
 	$('.social').mouseenter(function() {
 		var id = $(this).attr('id');
 		var id1 = "#" + id;
 		var id2 = "#" + id + "-hover";
-		console.log(id2);
-		console.log(id1);
-
-		$(id2).css({"width": "100px", "height": "100px", "transform": "translateY(-100%)", "transition": "0.01s"});
-//		$(this).removeAttr('style');
-		$(id2).show();
-		$(id1).css({"width": "99px", "height": "99px", "transition": "0.2s"});
-		$(id2).css({"width": "99px", "height": "99px", "transform": "translateY(0)", "transition": "0.2s"});
+		var id3 = "#" + id + "-basic";
+				
+		$(id1).css({"width": "96px", "height": "96px", "transition": "0.8s", "background-color": "green"});
+		$(id2).css({"width": "96px", "height": "96px", "transform": "translateY(0)", "transition": "0.3s"});
+		$(id3).css({"width": "96px", "height": "96px", "transform": "translateY(100%)", "transition": "0.3s"});		
 	});
 
 	$('.social').mouseleave(function() {
+		$(id3).show();
 		var id = $(this).attr('id');
 		var id1 = "#" + id;
 		var id2 = "#" + id + "-hover";
-		
-		$(id1).css({"width": "100px", "height": "100px", "transition": "0.3s"});
-		$(id2).css({"width": "100px", "height": "100px", "transition": "0.3s"});
-		$(id2).fadeOut(300);
-//		$(this).removeAttr('style');
+		var id3 = "#" + id + "-basic";
+
+		$(id1).css({"width": "100px", "height": "100px", "transition": "0.3s", "background-color": "red"});
+		$(id2).css({"width": "100px", "height": "100px", "transform": "translateY(-100%)", "transition": "0.01s"});
+		$(id3).css({"width": "100px", "height": "100px", "transform": "translateY(0)", "transition": "0.01s"});
 	});
 	
 
