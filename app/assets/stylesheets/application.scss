@@ -40,7 +40,7 @@
 }
 
 //
-// All the sections of the site
+// All the sections of the site --------------------------------------------------
 //
 
 .body {
@@ -83,13 +83,14 @@
 #a4 {
 	background-color: #03998d;
 	min-height: 500px;
+	width: 100vw;
 	max-width: 100%;
 //	padding-top: 30px;
 	padding-bottom: 30px;
 }
 
 //
-// Elements in the canvas
+// Elements in the canvas --------------------------------------------------
 //
 
 .intro_name_bg {
@@ -126,7 +127,7 @@
 }
 
 //
-// The Navigation Bar
+// The Navigation Bar --------------------------------------------------
 //
 
 .about_bar {
@@ -151,7 +152,7 @@
 //
 
 //
-// Section One: About Me
+// Section One: About Me --------------------------------------------------
 //
 
 #intro {
@@ -182,7 +183,7 @@
 //
 
 //
-// Section Two: My Skills
+// Section Two: My Skills --------------------------------------------------
 //
 
 .kerron_circle {
@@ -303,7 +304,7 @@
 }
 
 //
-// Section 4: The Contact Form
+// Section 4: The Contact Form --------------------------------------------------
 //
 
 .myform {
@@ -359,7 +360,7 @@
 }
 
 //
-// The Animation's Section
+// The Animation's Section --------------------------------------------------
 //
 
 @keyframes slide {
@@ -367,7 +368,7 @@
 }
 
 //
-// Section Three: Git Portfolios
+// Section Three: Git Portfolios --------------------------------------------------
 //
 
 
@@ -416,16 +417,16 @@
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .9s ease;
-  background-color: #90c489;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .9s ease;
+	background-color: #90c489;
 }
 
 .mix:hover .overlay {
@@ -433,35 +434,35 @@
 }
 
 .mix:hover .btm_overlay {
-  height: 50%;
+	height: 50%;
 }
 
 .text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
 }
 
 .text_btm {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  border: 3px solid #03998d;
-  top: 50%;
-  left: 50%;
-  padding: 5px;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-  cursor: pointer;
-  transition: .2s ease;
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	border: 3px solid #03998d;
+	top: 50%;
+	left: 50%;
+	padding: 5px;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+	cursor: pointer;
+	transition: .2s ease;
 }
 
 .text_btm:hover {
@@ -470,49 +471,49 @@
 }
 
 //
-// Modal for the slideshow
+// Modal for the slideshow --------------------------------------------------
 //
 
 /*.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: black;
 } */
 
 .outer-outer {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-//  background-color: black;
-//  opacity: 0.5;
-  top: 0;
-  left: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+//	background-color: black;
+//	opacity: 0.5;
+	top: 0;
+	left: 0;
 }
 .outer {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0.5;
-  top: 0;
-  left: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.5;
+	top: 0;
+	left: 0;
 }
 
 /* Modal Content */
 .inner-content {
-  position: relative;
-  background-color: white;
-  margin: auto;
-  padding: 25px;
-  width: 500px;
-  height: 400px
+	position: relative;
+	background-color: white;
+	margin: auto;
+	padding: 25px;
+	width: 500px;
+	height: 400px
   }
 
   //
@@ -520,47 +521,50 @@
   //
 
   //
-  // Social Media
+  // Social Media --------------------------------------------------
   //
 
 .social-media{
 	background-color: #3b453a;
 	height: 300px;
+	width: 100%;
+	max-width: 100%;
 }
 
 .social {
-  display: inline-block;
-  height: 100px;
-  width: 100px;
-  background-color: red;
-  margin-right: 50px;
-  margin-left: 0;
-  overflow: hidden;
-  transition: .5s;
-  position: relative;
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	background-color: red;
+	margin-right: 25px;
+	margin-left: 25px;
+	overflow: hidden;
+	transition: .5s;
+	position: relative;
+}
+
+.social-block {
+	display: inline-block;
 }
 
 .social-basic {
-//  display: inline-block;
-  height: 100px;
-  width: 100px;
-  transform: translateY(0);
-//  background-color: blue;
-//  margin-right: 50px;
-//  margin-left: 0;
-//  overflow: hidden;
-//  transition: .5s;
+	display: block;
+	height: 100%;
+	width: 100%;
+	transform: translateY(0);
 	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .social-hover {
-  transform: translateY(-100%);
-  height: 100px;
-  width: 100px;
-//  left: 5px;
-  position: absolute;
- 
-//  background-color: green;
+	display: block;
+	transform: translateY(-100%);
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .social-pic {
@@ -571,9 +575,10 @@
   	position: relative;
   	left: 50%;
   	transform: translateX(-25%);
-  	padding-top: 20px; 
+  	padding-top: 20px;
+//  	width: 100vw;
+//  	max-width: 100%;
  }
-
 
 .copywrite {
 	left: 50%;

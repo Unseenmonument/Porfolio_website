@@ -1,0 +1,22 @@
+
+<div><%= @project.name %></div>
+<div><%= @project.language %></div>
+<div><%= @project.description %></div>
+<div><%= @project.blurb %></div>
+<div><%= @project.link %></div>
+	
+<div><%= image_tag @project.pic1.url, style: 'height: auto; width: 500px;' %></div>
+<div><%= image_tag @project.pic2.url, style: 'height: auto; width: 500px;' %></div>
+<div><%= image_tag @project.pic3.url, style: 'height: auto; width: 500px;' %></div>
+
+<!--	<%= image_tag @project.pic1.url(:medium) %>
+	<%= image_tag @project.pic1.url(:thumb) %>
+
+	<%= image_tag @project.pic2.url %>
+	<%= image_tag @project.pic2.url(:medium) %>
+	<%= image_tag @project.pic2.url(:thumb) %>
+
+	<%= image_tag @project.pic3.url %>
+	<%= image_tag @project.pic3.url(:medium) %>
+	<%= image_tag @project.pic3.url(:thumb) %> -->
+

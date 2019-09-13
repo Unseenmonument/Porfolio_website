@@ -1,0 +1,25 @@
+<h1>Projects#edit</h1>
+<%= form_for @project do |f| %>
+	<div><%= f.text_field :name, placeholder: "Project Name" %></div>
+	<div><%= f.text_field :language, placeholder: "language" %></div>
+	<div><%= f.text_area :description, placeholder: "What's this thing about?" %></div>
+	<div><%= f.text_field :blurb, placeholder: "blurb" %></div>
+	<div><%= f.text_field :link, placeholder: "link" %></div>
+	
+	<%= f.file_field :pic1 %>
+	<%= f.file_field :pic2 %>
+	<%= f.file_field :pic3 %>
+
+	<%= f.submit 'Submit' %>
+<% end %>
+
+
+<div><%= @project.name %></div>
+<div><%= @project.language %></div>
+<div><%= @project.description %></div>
+<div><%= @project.blurb %></div>
+<div><%= @project.link %></div>
+	
+<div><%= image_tag @project.pic1.url, style: 'height: auto; width: 100%;' %></div>
+<div><%= image_tag @project.pic2.url, style: 'height: auto; width: 100%;' %></div>
+<div><%= image_tag @project.pic3.url, style: 'height: auto; width: 100%;' %></div>

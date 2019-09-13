@@ -114,18 +114,25 @@
 							</div>
 						</div>
 					<% end %>
+					
+	<!--  ------------------ Modal Content -----------------------  -->
 					<% @projects.each do |project| %>
-						<!-- Modal Content -->
+					
 						<div id="modal<%= project.id %>" class="outer-outer">
 							<div class="outer"></div>
 							<div class="inner-content">
 								<p><%= project.id %></p>
+								<div><%= image_tag @project.pic1.url, style: 'height: auto; width: 400px;' %></div>
+								<div><%= image_tag @project.pic2.url, style: 'height: auto; width: 400px;' %></div>
+								<div><%= image_tag @project.pic3.url, style: 'height: auto; width: 400px;' %></div>
 								<h1><%= project.name %></h1>
 								<h3><%= project.description %></h3>
 								<a href="<%= project.link %>">View Code</a>
 							</div>
 						</div>
 					<% end %>
+
+	<!--  ------------------ End of Modal Content -----------------------  -->				
 				</div>
 			</div>
 		</div>		

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190902074845) do
+ActiveRecord::Schema.define(version: 20190911075754) do
 
   create_table "comments", force: :cascade do |t|
     t.string "name"
@@ -42,6 +42,18 @@ ActiveRecord::Schema.define(version: 20190902074845) do
     t.string "pic1"
     t.string "pic2"
     t.string "pic3"
+    t.string "pic1_file_name"
+    t.string "pic1_content_type"
+    t.integer "pic1_file_size"
+    t.datetime "pic1_updated_at"
+    t.string "pic2_file_name"
+    t.string "pic2_content_type"
+    t.integer "pic2_file_size"
+    t.datetime "pic2_updated_at"
+    t.string "pic3_file_name"
+    t.string "pic3_content_type"
+    t.integer "pic3_file_size"
+    t.datetime "pic3_updated_at"
   end
 
   create_table "skills", force: :cascade do |t|

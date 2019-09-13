@@ -25,7 +25,7 @@
 $( document ).ready(function() {
 
 //
-// mixitup code
+// mixitup code ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //
 
 	var mixer = mixitup('.container');
@@ -41,11 +41,11 @@ $( document ).ready(function() {
 	});
 
 //
-// end of mixitup code
+// end of mixitup code ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //
 
 //
-// modal code
+// modal code :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //
 	$('.outer-outer').hide();
 	$('.text_btm').click(function() {
@@ -59,67 +59,53 @@ $( document ).ready(function() {
 	});
 
 //
-// end of modal code
+// end of modal code ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //
 
-
-
 	$('.projects').hide();
-	//$('.about_pics').hide();
-
 
 	$('#a1').hover(function() {
 		$('.about_pics').delay(100).fadeIn(1000);
-//		$('.about1').fadeIn();
-//		$('.about2').fadeIn();
-//		$('.about3').fadeIn();
-//		$('.about4').fadeIn();
 	});
 
-
-
 	$('#a1').hover(typeWriter);
-
-	var i = 0;
-	var txt = 'ALLOW ME TO INTRODUCE MYSELF...';
-	var speed = 200;
+		var i = 0;
+		var txt = 'ALLOW ME TO INTRODUCE MYSELF...';
+		var speed = 200;
 
 	function typeWriter() {
-	  if (i < txt.length) {
-	    document.getElementById("intro").innerHTML += txt.charAt(i);
-	    i++;
-	    setTimeout(typeWriter, speed);
-	  };
+		if (i < txt.length) {
+		    document.getElementById("intro").innerHTML += txt.charAt(i);
+		    i++;
+		    setTimeout(typeWriter, speed);
+		};
 	};
 
 //
-// Social Media Icons
+// Social Media Icons ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //
 
-//	$('.social-hover').hide();
-//	$('.social-basic').hide();
 
 	$('.social').mouseenter(function() {
 		var id = $(this).attr('id');
 		var id1 = "#" + id;
-		var id2 = "#" + id + "-hover";
-		var id3 = "#" + id + "-basic";
-				
-		$(id1).css({"width": "96px", "height": "96px", "transition": "0.8s", "background-color": "green"});
-		$(id2).css({"width": "96px", "height": "96px", "transform": "translateY(0)", "transition": "0.3s"});
-		$(id3).css({"width": "96px", "height": "96px", "transform": "translateY(100%)", "transition": "0.3s"});		
-	});
+		var id2 = "#" + id + "-basic";
+		var id3 = "#" + id + "-hover";
+		
+		$(id1).css({"width": "96px", "height": "96px", "background-color": "green", "margin-right": "27px", "margin-left": "27px", "margin-top": "2px", "margin-bottom": "2px", "transition": "0.3s"});
+		$(id2).css({"transform": "translateY(100%)", "left": "-2px", "transition": "0.3s"});		
+		$(id3).css({"transform": "translateY(0)", "left": "-2px", "transition": "0.3s"});
+		});
 
 	$('.social').mouseleave(function() {
-		$(id3).show();
 		var id = $(this).attr('id');
 		var id1 = "#" + id;
-		var id2 = "#" + id + "-hover";
-		var id3 = "#" + id + "-basic";
-
-		$(id1).css({"width": "100px", "height": "100px", "transition": "0.3s", "background-color": "red"});
-		$(id2).css({"width": "100px", "height": "100px", "transform": "translateY(-100%)", "transition": "0.01s"});
-		$(id3).css({"width": "100px", "height": "100px", "transform": "translateY(0)", "transition": "0.01s"});
+		var id2 = "#" + id + "-basic";
+		var id3 = "#" + id + "-hover";
+		
+		$(id1).css({"width": "100px", "height": "100px", "background-color": "red", "margin-right": "25px", "margin-left": "25px", "margin-top": "0px", "margin-bottom": "0px", "transition": ".3s"});
+		$(id2).css({"margin-left": "auto", "margin-right": "auto", "left": "0px", "top": "0px", "transform": "translateY(0)", "transition": "0.01s"});
+		$(id3).css({"margin-left": "auto", "margin-right": "auto", "left": "0px", "top": "0px", "transform": "translateY(-100%)", "transition": "0.01s"});
 	});
 	
 
