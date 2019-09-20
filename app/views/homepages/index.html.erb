@@ -16,44 +16,47 @@
 <!-- <div class="meat"> -->
 
 	<div id="a1">
-		<div>
+		<div class="intro_holder" >
 			<h1 id="intro"></h1>
 		</div>
-		<div class="col-sm-12 about_pics row">
-			<div class="col-sm-3 about1 slide">
-				<div class="trapezoid">
+		<div class="about_whole flex">
+			<div class="col-sm-2 about_group flex">
+				<div class="trapezoid slide_left">
 					<div><%= image_tag("creativity.png", :class => "about-icon") %></div>
 				</div>
-				<div> Creative </div>
-				<div> Commited to finding unique yet simple solutions to everyday problems </div>
+				<div class="about_title"> Creative </div>
+				<div class="about_text"> Commited to finding unique yet simple solutions to everyday problems </div>
 			</div>
-			<div class="col-sm-3 about2 slide">
-				<div class="trapezoid">
+			<div class="col-sm-2 about_group flex">
+				<div class="trapezoid slide_left">
 					<div><%= image_tag("bow-tie.png", :class => "about-icon") %></div>
 				</div>
-				<div> Refined </div>
-				<div> Elegant and easy to navigate UX/UI that work on any device </div>
+				<div class="about_title"> Refined </div>
+				<div class="about_text"> Elegant and easy to navigate UX/UI that work on any device </div>
 			</div>
-			<div class="col-sm-3 about3 slide">
-				<div class="trapezoid">
+			<div class="col-sm-2 about_group flex">
+				<div class="trapezoid slide_right">
 					<div><%= image_tag("swift.png", :class => "about-icon") %></div>
 				</div>
-				<div> Speedy </div>
-				<div> Responsive desings with minimal load times </div>
+				<div class="about_title"> Speedy </div>
+				<div class="about_text"> Responsive desings with minimal load times </div>
 			</div>
-			<div class="col-sm-3 about4 slide">
-				<div class="trapezoid">
+			<div class="col-sm-2 about_group flex">
+				<div class="trapezoid slide_right">
 					<div><%= image_tag("kenetic.png", :class => "about-icon") %></div>
 				</div>
-				<div> Kenetic </div>
-				<div> Lively, not static, webpages that are visually engaging </div>
+				<div class="about_title"> Kenetic </div>
+				<div class="about_text"> Lively, not static, webpages that are visually engaging </div>
 			</div>
 		</div>
 	</div>
+
+
+
 	<div id="a2">
 		<div class="a1content col-sm-9 flex"> 
 			<div class="row">
-				<div class="col-sm-3">
+				<div class="col-sm-4 flex">
 					<div class="c1 circle shapeborder">
 						<div class="c2 circle">
 							<div class="c3 circle">	
@@ -64,7 +67,7 @@
 					<div>Kerron Who?</div>
 					<div>A man. As falliable and any other, as mortal as any other.</div> 
 				</div>
-				<div class="col-sm-6 skill">
+				<div class="col-sm-6 skill flex">
 					<% @skills.each do |skill| %>
 						<div class="row skill">
 							<div class="full-skill-bar"> 
@@ -72,9 +75,9 @@
 								<span class="skill-name">
 									<%= skill.name %>
 								</span>
-								<span class="skill-percent">
+	<!--							<span class="skill-percent"> -->
 									<%= skill.proficientcy %>% 
-								</span>
+	<!--							</span>  -->
 							</div>
 						</div>
 					<% end %>
@@ -87,20 +90,20 @@
 	<div id="a3" class="container-flex">
 		<div class="a3content col-sm-12">
 
-			<ul>
-				<li class="all button" data-filter="all">all</li>
-				<li class="blue_button" data-filter=".blue">blue</li>
-				<li class="red_button" data-filter=".red">red</li>
-				<li class="white_button" data-filter=".white">white</li>
-				<li class="green_button" data-filter=".green">green</li>
-				<li class="orange_button" data-filter=".orange">orange</li>
-				<li class="orange_button" data-filter=".gold">gold</li>				
-			</ul>
+			<div class="pj_bar_div">
+				<div class="pj_center">
+					<div class="all button active pj_bar pj1" data-filter="all"><div class="pj_title">All</div></div><!-- this is added to remove the space between in-line elements
+					--><div class="ruby_button pj_bar pj2" data-filter=".ruby_on_rails"><div class="pj_title">Ruby On Rails</div></div><!--  this is added to remove the space between in-line elements
+					--><div class="react_button pj_bar pj3" data-filter=".reactjs"><div class="pj_title">ReactJS</div></div><!-- this is added to remove the space between in-line elements
+					--><div class="javascript_button pj_bar pj4" data-filter=".javascript"><div class="pj_title">JavaScript</div></div><!-- this is added to remove the space between in-line elements
+ 					--><div class="pj_bar_slider pj5"></div>			
+				</div>
+			</div>
 
 			<div class="container">
 				<div class="row justify-content-center">
 					<% @projects.each do |project| %>
-						<div class="col-md-3 gitbox5 mix red">
+						<div class="col-md-3 gitbox5 mix <%= project.language %>">
 							<div class="overlay">
 								<div class="top_overlay">
 								    <div class="text">
@@ -120,15 +123,55 @@
 					
 						<div id="modal<%= project.id %>" class="outer-outer">
 							<div class="outer"></div>
-							<div class="inner-content">
-								<p><%= project.id %></p>
-								<div><%= image_tag @project.pic1.url, style: 'height: auto; width: 400px;' %></div>
-								<div><%= image_tag @project.pic2.url, style: 'height: auto; width: 400px;' %></div>
-								<div><%= image_tag @project.pic3.url, style: 'height: auto; width: 400px;' %></div>
+							 <div class="inner-content">
+								<!-- <%= project.id %> -->
+								<div>
+									<div id="picture_carousel" class="carousel" data-ride="carousel">
+
+												  
+										<!-- The slideshow -->
+										<div class="born">
+											<!-- Indicators -->
+											<ul class="carousel-indicators">
+											    <li data-target="#demo" data-slide-to="0" class="active"></li>
+											    <li data-target="#demo" data-slide-to="1"></li>
+											    <li data-target="#demo" data-slide-to="2"></li>
+											</ul>
+													
+											<div class="carousel-inner">
+											    <div class="carousel-item active">
+											    	<%= image_tag @project.pic1.url, style: 'height: auto; width: 100%;', :class => "pic1" %>
+											    </div>
+											    <div class="carousel-item">
+											    	<%= image_tag @project.pic2.url, style: 'height: auto; width: 100%;', :class => "pic2" %>
+											    </div>
+											    <div class="carousel-item">
+											    	<%= image_tag @project.pic3.url, style: 'height: auto; width: 100%;', :class => "pic3" %>
+											    </div>
+											    
+											    <!-- Left and right controls -->
+												<a class="carousel-control-prev" href="#demo" data-slide="prev">
+												    <span class="carousel-control-prev-icon"></span>
+												</a>
+												<a class="carousel-control-next" href="#demo" data-slide="next">
+												    <span class="carousel-control-next-icon"></span>
+												</a>
+
+											</div>
+										
+															  
+											
+
+										</div>
+									</div>
+								</div>
+							
 								<h1><%= project.name %></h1>
 								<h3><%= project.description %></h3>
 								<a href="<%= project.link %>">View Code</a>
 							</div>
+
+
 						</div>
 					<% end %>
 
@@ -157,5 +200,6 @@
 				<%= f.submit 'Submit', class: 'myform-button' %>
 			<% end %>
 		</div>
+
 
 	</div>

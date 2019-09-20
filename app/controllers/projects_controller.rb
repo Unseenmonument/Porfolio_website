@@ -10,12 +10,15 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+   
+
   end
 
   def show
   end
 
   def update
+
   	respond_to do |format|
       if @project.update(project_params)
         format.html { redirect_to @project, notice: 'Project was successfully updated.' }
@@ -56,6 +59,6 @@ class ProjectsController < ApplicationController
     end
 
     def project_params
-      params.require(:project).permit(:name, :description, :link, :pic1, :pic2, :pic3)
+      params.require(:project).permit(:name, :description, :language, :link, :pic1, :pic2, :pic3)
     end
 end

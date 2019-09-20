@@ -12,34 +12,43 @@
     <%= yield %>
 
     <div class="social-media">    	
-	    <div class="social-row">
-	    	<div class="social-block">
-		    	<div id="linked" class="social">
-	    			<%= image_tag("linkedin.png", :class => "social-pic social-basic", :id => "linked-basic") %>
-	    			<%= image_tag("linkedin.png", :class => "social-pic social-hover", :id => "linked-hover") %>
+		<div>
+		    <div class="social-1">
+			    <div class="social-fix">
+			    	<div class="social-block">
+				    	<div id="linked" class="social">
+			    			<%= image_tag("linkedin.png", :class => "social-pic social-basic", :id => "linked-basic") %>
+			    			<%= image_tag("linkedin.png", :class => "social-pic social-hover", :id => "linked-hover") %>
+				    	</div>
+				    </div>
+				    <div class="social-block">	
+				    	<div id="git" class="social">
+				    		<%= image_tag("github.png", :class => "social-pic social-basic", :id => "git-basic") %>
+				    		<%= image_tag("github.png", :class => "social-pic social-hover", :id => "git-hover") %>
+				    	</div>
+				    </div>
+				    <div class="social-block">
+				    	<div id="twitter" class="social">
+			    			<%= image_tag("twitter.png", :class => "social-pic social-basic", :id => "twitter-basic") %>
+			    			<%= image_tag("twitter.png", :class => "social-pic social-hover", :id => "twitter-hover") %>
+				    	</div>
+				    </div>
+				    <div class="social-block">	
+				    	<div id="insta" class="social">
+			    			<%= image_tag("insta.png", :class => "social-pic social-basic", :id => "insta-basic") %>
+			    			<%= image_tag("insta.png", :class => "social-pic social-hover", :id => "insta-hover") %>
+				    	</div>
+				    </div>
 		    	</div>
 		    </div>
-		    <div class="social-block">	
-		    	<div id="git" class="social">
-		    		<%= image_tag("github.png", :class => "social-pic social-basic", :id => "git-basic") %>
-		    		<%= image_tag("github.png", :class => "social-pic social-hover", :id => "git-hover") %>
-		    	</div>
-		    </div>
-		    <div class="social-block">
-		    	<div id="twitter" class="social">
-	    			<%= image_tag("twitter.png", :class => "social-pic social-basic", :id => "twitter-basic") %>
-	    			<%= image_tag("twitter.png", :class => "social-pic social-hover", :id => "twitter-hover") %>
-		    	</div>
-		    </div>
-		    <div class="social-block">	
-		    	<div id="insta" class="social">
-	    			<%= image_tag("insta.png", :class => "social-pic social-basic", :id => "insta-basic") %>
-	    			<%= image_tag("insta.png", :class => "social-pic social-hover", :id => "insta-hover") %>
-		    	</div>
-		    </div>
-	    </div>
-	    <div class="copywrite col-sm-3">KERRON STREATER ©2019</div>
+		</div>
+		
+		<div class="copywrite">KERRON STREATER ©2019</div>
+	  	
+
+
 	</div>
-  
+
+	
   </body>
 </html>

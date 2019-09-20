@@ -4,6 +4,7 @@ class HomepagesController < ApplicationController
 		@contact = Contact.new
 		@skills = Skill.all
 		@projects = Project.all
+		@project = Project.last
 	end
 
 	def create
