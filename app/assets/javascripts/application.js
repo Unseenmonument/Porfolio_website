@@ -45,6 +45,64 @@ $( document ).ready(function() {
 //
 
 //
+// Scroll To Section :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//
+
+//	$('.scroll_contact').click(function(){
+//		document.getElementById('a4').scrollIntoView();
+//	});
+
+	function scrollProjects() {
+            $('html, body').animate({ scrollTop: $('#a3').offset().top }, 'slow');
+            return false;
+    };
+
+	function scrollContact() {
+            $('html, body').animate({ scrollTop: $('#a4').offset().top }, 'slow');
+            return false;
+    };
+
+	function scrollSkills() {
+            $('html, body').animate({ scrollTop: $('#a2').offset().top }, 'slow');
+            return false;
+    };
+
+	function scrollAbout() {
+            $('html, body').animate({ scrollTop: $('#a1').offset().top }, 'slow');
+            return false;
+    };
+
+    function scrollTop() {
+            $('html, body').animate({ scrollTop: $('.canvas').offset().top }, 'slow');
+            return false;
+    };
+
+    $('.scroll_projects').click(function(){
+    	scrollProjects();
+    });
+
+    $('.scroll_about').click(function(){
+    	scrollAbout();
+    });    
+
+    $('.scroll_contact').click(function(){
+    	scrollContact();
+    });
+
+    $('.scroll_skills').click(function(){
+    	scrollSkills();
+    });
+
+    $('.canvas_button').click(function() {
+    	scrollAbout();
+    });
+
+    $('.go_to_top').click(function() {
+    	scrollTop();
+    });
+
+
+//
 // modal code :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //
 	$('.outer-outer').hide();
@@ -114,7 +172,7 @@ $( document ).ready(function() {
 	var new_e = new_e.toFixed(2);
 	$('.pj_center').css({"width": a + b + c + d + e + "px", "transform": "translateX(" + new_e + "px)"});
 
-
+// ::::::::::::: The About Section ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 	$('.about_title').hide();
 	$('.about_text').hide();
@@ -174,6 +232,22 @@ $( document ).ready(function() {
 		$(id3).css({"margin-left": "auto", "margin-right": "auto", "left": "0px", "top": "0px", "transform": "translateY(-100%)", "transition": "0.01s"});
 	
 		console.log(id3);
+	});
+
+	$('#linked').click(function(){
+		window.location.href = "https://www.linkedin.com/in/kerron-streater/";
+	});
+
+	$('#git').click(function(){
+		window.location.href = "http://github.com/unseenmonument";
+	});
+
+	$('#twitter').click(function(){
+		window.location.href = "http://twitter.com/unseenmonument";
+	});
+
+	$('#insta').click(function(){
+		window.location.href = "http://instagram.com/unseenmonument/";
 	});
 	
 
