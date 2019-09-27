@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
   
+  get 'skill/index'
+
+  get 'skill/new'
+
+  get 'skill/edit'
+
+  get 'skill/show'
+
   get 'projects/index'
   get 'projects/new'
   get 'projects/edit'

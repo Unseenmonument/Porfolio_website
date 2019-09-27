@@ -5,7 +5,11 @@
 	<div><%= f.text_area :description, placeholder: "What's this thing about?" %></div>
 	<div><%= f.text_field :blurb, placeholder: "blurb" %></div>
 	<div><%= f.text_field :link, placeholder: "link" %></div>
-	
+
+	<br>
+	<%= f.file_field :main_pic %>
+	<br>
+	<br>
 	<%= f.file_field :pic1 %>
 	<%= f.file_field :pic2 %>
 	<%= f.file_field :pic3 %>
@@ -19,6 +23,8 @@
 <div><%= @project.description %></div>
 <div><%= @project.blurb %></div>
 <div><%= @project.link %></div>
+
+<div><%= image_tag @project.main_pic.url, style: 'height: auto; width: 100%;' %></div>
 	
 <div><%= image_tag @project.pic1.url, style: 'height: auto; width: 100%;' %></div>
 <div><%= image_tag @project.pic2.url, style: 'height: auto; width: 100%;' %></div>

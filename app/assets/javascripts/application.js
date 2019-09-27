@@ -24,12 +24,15 @@
 
 $( document ).ready(function() {
 
+
+
 //
 // mixitup code ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //
 
-	var mixer = mixitup('.container');
-	var mixer = mixitup('.container', {
+	var mixer = mixitup('.project_holder');
+//	var mixer = mixitup(containerEl);
+	var mixer = mixitup('.project_holder', {
 	    selectors: {
 	        target: '.mix'
 	    },
@@ -38,6 +41,37 @@ $( document ).ready(function() {
 	        clampWidth: false,
 	        clampHeight: false,
 	    }
+	});
+
+
+
+	$( window ).resize(function() {
+
+		function detectmob() {
+		   if(window.innerWidth <= 800 && window.innerHeight <= 600) {
+		     return true;
+		     console.log("true");
+
+		     $(".gitbox5").addClass("col-lg-12");
+
+		   } else {
+		     return false;
+		     console.log("false");
+		   }
+		}
+
+		detectmob();
+
+		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+		if (isMobile) {
+	    	$(".gitbox5").addClass("col-lg-12");
+	    	$(".gitbox5").css({"width": "100%"});
+	//    	$(".project_row").css({"display": "block"});
+		} else {
+	    	$(".gitbox5").removeClass("col-lg-12");
+	    	$(".gitbox5").css({"width": "400px"});
+	//    	$(".project_row").css({"display": "inline-block"});
+		}
 	});
 
 //
@@ -176,10 +210,10 @@ $( document ).ready(function() {
 
 	$('.about_title').hide();
 	$('.about_text').hide();
-	$('.about_whole').hide();
+	$('.about_group').hide();
 
 	$('#a1').hover(function() {
-		$('.about_whole').delay(100).fadeIn(1000);
+		$('.about_group').delay(100).fadeIn(1000);
 		$('.about_title').delay(2000).fadeIn(1000);
 		$('.about_text').delay(2000).fadeIn(1000);
 	});
@@ -235,19 +269,23 @@ $( document ).ready(function() {
 	});
 
 	$('#linked').click(function(){
-		window.location.href = "https://www.linkedin.com/in/kerron-streater/";
+//		window.location.href = "https://www.linkedin.com/in/kerron-streater/";
+		window.open('https://www.linkedin.com/in/kerron-streater/', '_blank'); 
 	});
 
 	$('#git').click(function(){
-		window.location.href = "http://github.com/unseenmonument";
+//		window.location.href = "http://github.com/unseenmonument";
+		window.open('http://github.com/unseenmonument', '_blank'); 
 	});
 
 	$('#twitter').click(function(){
-		window.location.href = "http://twitter.com/unseenmonument";
+//		window.location.href = "http://twitter.com/unseenmonument";
+		window.open('http://twitter.com/unseenmonument', '_blank'); 
 	});
 
 	$('#insta').click(function(){
-		window.location.href = "http://instagram.com/unseenmonument/";
+//		window.location.href = "http://instagram.com/unseenmonument/";
+		window.open('http://instagram.com/unseenmonument/', '_blank'); 
 	});
 	
 

@@ -23,6 +23,6 @@ class HomepagesController < ApplicationController
 
 	private
 		def contact_params
-	      params.require(:contact).permit(:f_name, :_name, :email, :phone, :company, :reason)
+	      params.require(:contact).permit(:full_name, :comment, :email, :phone, :company, :reason)
 	    end
 end

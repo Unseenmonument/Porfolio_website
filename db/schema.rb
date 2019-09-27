@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190911075754) do
+ActiveRecord::Schema.define(version: 20190926192048) do
 
   create_table "comments", force: :cascade do |t|
     t.string "name"
@@ -21,14 +21,20 @@ ActiveRecord::Schema.define(version: 20190911075754) do
   end
 
   create_table "contacts", force: :cascade do |t|
-    t.string "f_name"
-    t.string "l_name"
     t.string "company"
     t.text "reason"
     t.string "email"
     t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "full_name_file_name"
+    t.string "full_name_content_type"
+    t.integer "full_name_file_size"
+    t.datetime "full_name_updated_at"
+    t.string "comment_file_name"
+    t.string "comment_content_type"
+    t.integer "comment_file_size"
+    t.datetime "comment_updated_at"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -54,6 +60,10 @@ ActiveRecord::Schema.define(version: 20190911075754) do
     t.string "pic3_content_type"
     t.integer "pic3_file_size"
     t.datetime "pic3_updated_at"
+    t.string "main_pic_file_name"
+    t.string "main_pic_content_type"
+    t.integer "main_pic_file_size"
+    t.datetime "main_pic_updated_at"
   end
 
   create_table "skills", force: :cascade do |t|

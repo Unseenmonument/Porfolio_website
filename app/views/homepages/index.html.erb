@@ -22,34 +22,44 @@
 		<div class="intro_holder" >
 			<h1 id="intro"></h1>
 		</div>
-		<div class="about_whole flex">
-			<div class="col-sm-2 about_group flex">
-				<div class="trapezoid slide_left">
-					<div><%= image_tag("creativity.png", :class => "about-icon") %></div>
+		<div class="container flex">
+			<div class="row no-gutters help_us">
+				<div class="col-lg-6 help_me">
+	<!--				<div class="about_holder"> -->
+						<div class="about_group flex">
+							<div class="trapezoid slide_left">
+								<div><%= image_tag("creativity.png", :class => "about-icon creative_icon") %></div>
+							</div>
+							<div class="about_title"> Creative </div>
+							<div class="about_text">Unique & simple solutions to everyday problems </div>
+						</div>
+						<div class=" about_group flex">
+							<div class="trapezoid slide_left">
+								<div><%= image_tag("bow-tie.png", :class => "about-icon refined_icon") %></div>
+							</div>
+							<div class="about_title"> Refined </div>
+							<div class="about_text"> Elegant and easy to navigate UX/UI that work on any device </div>
+						</div>
+	<!--				</div>	-->
 				</div>
-				<div class="about_title"> Creative </div>
-				<div class="about_text"> Commited to finding unique yet simple solutions to everyday problems </div>
-			</div>
-			<div class="col-sm-2 about_group flex">
-				<div class="trapezoid slide_left">
-					<div><%= image_tag("bow-tie.png", :class => "about-icon") %></div>
+				<div class="col-lg-6 help_me">
+	<!--				<div class="about_holder"> -->
+						<div class="about_group flex">
+							<div class="trapezoid slide_right">
+								<div><%= image_tag("swift.png", :class => "about-icon speedy_icon") %></div>
+							</div>
+							<div class="about_title"> Speedy </div>
+							<div class="about_text"> Responsive desings with minimal load times </div>
+						</div>
+						<div class=" about_group flex">
+							<div class="trapezoid slide_right">
+								<div><%= image_tag("kenetic.png", :class => "about-icon kenetic_icon") %></div>
+							</div>
+							<div class="about_title"> Kenetic </div>
+							<div class="about_text"> Lively, not static, webpages that are visually engaging </div>
+						</div>
+	<!--				</div> -->
 				</div>
-				<div class="about_title"> Refined </div>
-				<div class="about_text"> Elegant and easy to navigate UX/UI that work on any device </div>
-			</div>
-			<div class="col-sm-2 about_group flex">
-				<div class="trapezoid slide_right">
-					<div><%= image_tag("swift.png", :class => "about-icon") %></div>
-				</div>
-				<div class="about_title"> Speedy </div>
-				<div class="about_text"> Responsive desings with minimal load times </div>
-			</div>
-			<div class="col-sm-2 about_group flex">
-				<div class="trapezoid slide_right">
-					<div><%= image_tag("kenetic.png", :class => "about-icon") %></div>
-				</div>
-				<div class="about_title"> Kenetic </div>
-				<div class="about_text"> Lively, not static, webpages that are visually engaging </div>
 			</div>
 		</div>
 	</div>
@@ -59,9 +69,9 @@
 	<div id="a2">
 		<div class="section_title"> SKILLS </div>
 		<div class="underline"></div>
-		<div class="a1content col-sm-9 flex"> 
+		<div class="container a2content col-sm-9 flex"> 
 			<div class="row">
-				<div class="col-sm-4 flex">
+				<div class="col-lg-6 myth_whole flex">
 					<div class="c1 circle shapeborder">
 						<div class="c2 circle">
 							<div class="c3 circle">	
@@ -69,20 +79,22 @@
 							</div>
 						</div>
 					</div>
-					<div class="man_myth">A Man? A Myth? A Legend?</div>
+					<div class="man_myth">Man? Myth? Legend?</div>
 					<div class="myth_text">An eternal creative optimist, focused on finding the best solutions to life's problems.</div> 
 				</div>
-				<div class="col-sm-6 skill flex">
+				<div class="col-lg-6 flex skill_column">
 					<% @skills.each do |skill| %>
-						<div class="row skill">
+						<div class="row skill ">
 							<div class="full-skill-bar"> 
-								<span class="skill-level slide-bar" style="min-width: calc(<%= skill.proficientcy %>px * 3 + 150px);"></span>
-								<span class="skill-name">
+<!--								<div class="skill-level slide-bar" style="min-width: calc(<%= skill.proficientcy %>px * 3 + 70px);"> -->
+								<div class="skill-level slide-bar" style="min-width: <%= skill.proficientcy %>%;">
+								</div>
+								<div class="skill-name">
 									<%= skill.name %>
-								</span>
-	<!--							<span class="skill-percent"> -->
-									<%= skill.proficientcy %>% 
-	<!--							</span>  -->
+								</div>
+								<div class="skill-prof">
+									<%= skill.proficientcy %>%
+								</div> 
 							</div>
 						</div>
 					<% end %>
@@ -96,22 +108,23 @@
 
 		<div class="section_title"> PROJECTS </div>
 		<div class="underline"></div>
-		<div class="a3content col-sm-12">
+		<div class="a3content col-lg-12">
 
 			<div class="pj_bar_div">
 				<div class="pj_center">
-					<div class="all button active pj_bar pj1" data-filter="all"><div class="pj_title">All</div></div><!-- this is added to remove the space between in-line elements
-					--><div class="ruby_button pj_bar pj2" data-filter=".ruby_on_rails"><div class="pj_title">Ruby On Rails</div></div><!--  this is added to remove the space between in-line elements
-					--><div class="react_button pj_bar pj3" data-filter=".reactjs"><div class="pj_title">ReactJS</div></div><!-- this is added to remove the space between in-line elements
-					--><div class="javascript_button pj_bar pj4" data-filter=".javascript"><div class="pj_title">JavaScript</div></div><!-- this is added to remove the space between in-line elements
+					<div class="all_button active pj_bar pj1" data-filter="all"><div class="pj_title" data-filter="all">All</div></div><!-- this is added to remove the space between in-line elements
+					--><div class="ruby_button pj_bar pj2" data-filter=".ruby_on_rails"><div class="pj_title" data-filter=".ruby_on_rails">Ruby On Rails</div></div><!--  this is added to remove the space between in-line elements
+					--><div class="react_button pj_bar pj3" data-filter=".reactjs"><div class="pj_title" data-filter=".reactjs">ReactJS</div></div><!-- this is added to remove the space between in-line elements
+					--><div class="javascript_button pj_bar pj4" data-filter=".javascript"><div class="pj_title" data-filter=".javascript">JavaScript</div></div><!-- this is added to remove the space between in-line elements
  					--><div class="pj_bar_slider pj5"></div>			
 				</div>
 			</div>
 
-			<div class="container">
-				<div class="row justify-content-center">
+			<div class="project_holder">
+				<div class="row project_row justify-content-center">
 					<% @projects.each do |project| %>
-						<div class="col-md-3 gitbox5 mix <%= project.language %>">
+						<div class=" gitbox5 mix <%= project.language %>">
+						<!--	<%= image_tag @project.main_pic.url, style: 'height: auto; width: 100%;', :class => "pic1" %> -->
 							<div class="overlay">
 								<div class="top_overlay">
 								    <div class="text">
@@ -125,6 +138,7 @@
 							</div>
 						</div>
 					<% end %>
+
 					
 	<!--  ------------------ Modal Content -----------------------  -->
 					<% @projects.each do |project| %>
@@ -200,10 +214,10 @@
 
 		<div class="myform col-sm-5">
 			<%= form_for @contact do |f| %>
-				<div><%= f.text_field :f_name, class: 'myform-info', placeholder: "Your Name" %></div>
+				<div><%= f.text_field :full_name, class: 'myform-info', placeholder: "Your Name" %></div>
 				<div><%= f.text_field :company, class: 'myform-info', placeholder: "Company (Not required)" %></div>
 				<div><%= f.select(:reason, options_for_select([['Random Bypasser', 'Random'], ['Job Recruiter','Recruiting'], ['Employer Checking You Out', 'Employer']]), {:prompt => 'What Brings You Here?'}, {:class => 'myform-why'}) %></div>
-				<div><%= f.text_area :l_name, class: 'myform-text', placeholder: 'Want to tell me something?' %></div>
+				<div><%= f.text_area :comment, class: 'myform-text', placeholder: 'Want to tell me something?' %></div>
 				<div><%= f.text_field :email, class: 'myform-mail', placeholder: "Email" %></div>
 				  
 				<%= f.submit 'Submit', class: 'myform-button' %>
