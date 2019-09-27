@@ -61,6 +61,7 @@
 	padding-top: 30px;
 	padding-bottom: 60px;
 	overflow: hidden;
+	margin-bottom: 0px;
 }
 
 #a4 {
@@ -71,6 +72,7 @@
 //	padding-top: 30px;
 	padding-bottom: 30px;
 	overflow: hidden;
+	margin-top: 0px;
 }
 
 //
@@ -275,7 +277,8 @@
 .intro_holder {
 	display: block;
 	background-color: #FAE3B;
-	height: 50px;
+	height: auto;
+	margin-bottom: 15px;
 }
 
 #intro {
@@ -566,9 +569,13 @@
 
 .project_holder {
 	width: 100%;
-	margin-left: 0;
-	margiin-right: 0;
+	margin-left: 0px;
+	margin-right: 0px;
 	display: inline;
+}
+
+.project_row {
+	padding: 0px;
 }
 
 .row {
@@ -617,6 +624,7 @@
 
 .overlay {
 	position: relative;
+//	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -625,6 +633,7 @@
 	width: 100%;
 	opacity: 0;
 	transition: .9s ease;
+	transform: translateY(-300px);
 	background-color: #90c489;
 }
 

@@ -124,7 +124,7 @@
 				<div class="row project_row justify-content-center">
 					<% @projects.each do |project| %>
 						<div class=" gitbox5 mix <%= project.language %>">
-						<!--	<%= image_tag @project.main_pic.url, style: 'height: auto; width: 100%;', :class => "pic1" %> -->
+							<%= image_tag project.main_pic.url, style: 'height: 300px; width: 400px;', :class => "main_pic" %>
 							<div class="overlay">
 								<div class="top_overlay">
 								    <div class="text">

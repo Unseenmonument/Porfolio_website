@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190926192048) do
+ActiveRecord::Schema.define(version: 20190927051620) do
 
   create_table "comments", force: :cascade do |t|
     t.string "name"
@@ -27,14 +27,8 @@ ActiveRecord::Schema.define(version: 20190926192048) do
     t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "full_name_file_name"
-    t.string "full_name_content_type"
-    t.integer "full_name_file_size"
-    t.datetime "full_name_updated_at"
-    t.string "comment_file_name"
-    t.string "comment_content_type"
-    t.integer "comment_file_size"
-    t.datetime "comment_updated_at"
+    t.string "full_name"
+    t.string "comment"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -45,9 +39,6 @@ ActiveRecord::Schema.define(version: 20190926192048) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "blurb"
-    t.string "pic1"
-    t.string "pic2"
-    t.string "pic3"
     t.string "pic1_file_name"
     t.string "pic1_content_type"
     t.integer "pic1_file_size"
@@ -64,6 +55,10 @@ ActiveRecord::Schema.define(version: 20190926192048) do
     t.string "main_pic_content_type"
     t.integer "main_pic_file_size"
     t.datetime "main_pic_updated_at"
+    t.string "pic1"
+    t.string "pic2"
+    t.string "pic3"
+    t.string "main_pic"
   end
 
   create_table "skills", force: :cascade do |t|

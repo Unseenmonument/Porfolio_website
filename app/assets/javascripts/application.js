@@ -65,12 +65,27 @@ $( document ).ready(function() {
 		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 		if (isMobile) {
 	    	$(".gitbox5").addClass("col-lg-12");
-	    	$(".gitbox5").css({"width": "100%"});
-	//    	$(".project_row").css({"display": "block"});
+	    	$(".gitbox5").css({"width": "100%", "padding-left": "0px", "padding-right": "0px"});
+	    	$(".project_row").css({"width": "100%", "padding-left": "0px", "padding-right": "0px", "margin": "0"});
+	    	$(".main_pic").css({"width": "100%", "padding-left": "0px", "padding-right": "0px"});
+			$(".a3content").css({"margin": "0px", "width": "100%", "padding-right": "0px", "padding-left": "0px"});
+	    	$(".a4").css({"transform": "translateY(-10px)"});
+
+	    	$('.about_title').show();
+			$('.about_text').show();
+			$('.about_group').show();
+
 		} else {
 	    	$(".gitbox5").removeClass("col-lg-12");
-	    	$(".gitbox5").css({"width": "400px"});
-	//    	$(".project_row").css({"display": "inline-block"});
+	    	$(".gitbox5").css({"width": "400px", "padding-left": "0px", "padding-right": "0px"});
+	    	$(".project_row").css({"width": "100%", "padding-left": "0px", "padding-right": "0px"});
+	    	$(".main_pic").css({"width": "400px", "padding-left": "0px", "padding-right": "0px"});
+			$(".a3content").css({"margin": "auto", "width": "auto"});
+	    	$(".a").css({"transform": "translateY(0px)"});
+
+	    	$('.about_title').hide();
+			$('.about_text').hide();
+			$('.about_group').hide();
 		}
 	});
 
