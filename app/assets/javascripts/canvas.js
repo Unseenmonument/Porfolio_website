@@ -46,12 +46,23 @@ $( document ).ready(function() {
 		this.color = colorArray[Math.floor(Math.random() * colorArray.length)];
 
 		this.draw = function() {
+				
+			if (this.radius < 15) {
+
+				var line_wdth = window.innerWidth + window.innerHeight;
+				c.beginPath;
+				c.moveTo(this.x, this.y);
+				c.lineTo((this.x + 8000), -(this.y + 8000));
+				c.stroke();
+			};
+
 			c.beginPath();
 			c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
 			c.fillStyle = this.color;
 			c.stroke();
 			c.fill();
 		}
+
 
 		this.update = function() {
 			if (this.x + this.radius > innerWidth || this.x - this.radius < 0) {

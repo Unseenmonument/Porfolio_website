@@ -90,7 +90,7 @@ function myfunction() {
 //	});
 
 //
-// end of mixitup code ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// end of mixitup code :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //
 
 //
@@ -155,6 +155,7 @@ function myfunction() {
 // modal code :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //
 	$('.outer-outer').hide();
+
 	$('.text_btm').click(function() {
 		var id = $(this).parent().attr('id');
 		var id2 = "#modal" + id;
@@ -164,7 +165,7 @@ function myfunction() {
 
 	$('.outer').click(function() {
 		$('.outer-outer').fadeOut('slow');
-		$('.about_bar').css({"z-index": "+1"});
+		$('.about_bar').css({"z-index": "auto"});
 	});
 
 	$("#picture_carousel").carousel("pause");
@@ -173,7 +174,7 @@ function myfunction() {
 // end of modal code ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //
 
-	$('.projects').hide();
+/*	$('.projects').hide();
 	$('.pj_bar').click(function(){
 		$(this).siblings().removeClass('active');
 		$(this).addClass('active');
@@ -230,7 +231,7 @@ function myfunction() {
 	var new_e = e / 2;
 	var new_e = new_e.toFixed(2);
 	$('.pj_center').css({"width": a + b + c + d + e + "px", "transform": "translateX(" + new_e + "px)"});
-
+*/
 //:::::::::::::: Testing The New PJ Bar :::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
@@ -254,8 +255,6 @@ function myfunction() {
 			var namr2 = namr * 5;
 			var namr3 = namr * 7;
 			var namr4 = namr * 9;
-
-
 
 
 		var nb = $('.npj2').width();
@@ -322,15 +321,17 @@ function myfunction() {
 		$('.about_text').delay(2000).fadeIn(1000);
 	});
 
+	var type_count = 0;
 	$('#a1').hover(typeWriter);
 		var i = 0;
 		var txt = 'ALLOW ME TO INTRODUCE MYSELF...';
 		var speed = 200;
 
 	function typeWriter() {
-		if (i < txt.length) {
+		if (i < txt.length && type_count < txt.length) {
 		    document.getElementById("intro").innerHTML += txt.charAt(i);
 		    i++;
+		    type_count++;
 		    setTimeout(typeWriter, speed);
 		};
 	};
