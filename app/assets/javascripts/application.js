@@ -22,10 +22,10 @@
 
 
 
-$( document ).ready(function() {
+$( document ).ready(myfunction);
+$( window ).resize(myfunction);
 
-
-
+function myfunction() {
 //
 // mixitup code ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //
@@ -45,7 +45,7 @@ $( document ).ready(function() {
 
 
 
-	$( window ).resize(function() {
+//	$( window ).resize(function() {
 
 		function detectmob() {
 		   if(window.innerWidth <= 800 && window.innerHeight <= 600) {
@@ -87,7 +87,7 @@ $( document ).ready(function() {
 			$('.about_text').hide();
 			$('.about_group').hide();
 		}
-	});
+//	});
 
 //
 // end of mixitup code ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -179,15 +179,21 @@ $( document ).ready(function() {
 		$(this).addClass('active');
 	});
 
+
 	a = $('.pj1').width();
 	b = $('.pj2').width();
 	c = $('.pj3').width();
 	d = $('.pj4').width();
 	e = $('.pj5').width();
 
+
 	$('.pj_bar_slider').css({
 			"left": "auto", "width": a + "px", "opacity": "0.7"
 		});
+	
+			$('.new_pj_bar_slider').css({
+					"left": "auto", "width": na + "px", "opacity": "0.7"
+				});
 
 	$('.pj1').click(function() {
 		$('.pj_bar_slider').css({
@@ -195,11 +201,13 @@ $( document ).ready(function() {
 		});
 	});
 
+
 	$('.pj2').click(function() {
 		$('.pj_bar_slider').css({
 			"left": "auto", "transform": "translateX(" + a + "px)", "width": b + "px"
 		});
 	});
+
 
 	var ab = a + b;
 	var ab = ab.toFixed(2);
@@ -209,6 +217,7 @@ $( document ).ready(function() {
 		});
 	});
 
+
 	var abc = a + b + c;
 	var abc = abc.toFixed(2);
 	$('.pj4').click(function() {
@@ -217,10 +226,90 @@ $( document ).ready(function() {
 		});
 	});
 
+
 	var new_e = e / 2;
 	var new_e = new_e.toFixed(2);
 	$('.pj_center').css({"width": a + b + c + d + e + "px", "transform": "translateX(" + new_e + "px)"});
 
+//:::::::::::::: Testing The New PJ Bar :::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+		$('.new_pj_bar').click(function(){
+			$(this).siblings().removeClass('active');
+			$(this).addClass('active');
+		});
+
+
+		var na = $('.npj1').width();
+		var na = na.toFixed(0);
+		var na = Number(na);
+		console.log(na);
+
+			var	namr = $('.npj1').css('marginRight');
+			var	namr = parseFloat(namr);
+			var	namr = namr.toFixed(0);
+			var namr = Number(namr);
+			var namr1 = namr * 3;
+			var namr2 = namr * 5;
+			var namr3 = namr * 7;
+			var namr4 = namr * 9;
+
+
+
+
+		var nb = $('.npj2').width();
+			var nb = Number(nb);
+
+
+		var nc = $('.npj3').width();
+			var nc = Number(nc);
+
+
+		var nd = $('.npj4').width();
+			var nd = Number(nd);
+
+
+		var ne = $('.npj5').width();
+			var ne = Number(ne);
+//			var ne = parseInt(ne);
+//			var ne = ne.toFixed(2);
+
+			$('.new_pj_bar_slider').css({
+				"left": "auto", "transform": "translateX(" + namr + "px)", "width": na + "px"
+			});		
+
+
+		$('.npj1').click(function() {
+			$('.new_pj_bar_slider').css({
+				"left": "auto", "transform": "translateX(" + namr + "px)", "width": na + "px"
+			});
+		});
+
+
+		$('.npj2').click(function() {
+			$('.new_pj_bar_slider').css({
+				"left": "auto", "transform": "translateX(" + (na + namr1) + "px)", "width": nb + "px"
+			});
+		});
+
+
+		var nab = na + nb;
+		console.log(nab);
+		$('.npj3').click(function() {
+			$('.new_pj_bar_slider').css({
+				"left": "auto", "transform": "translateX(" + (nab + namr2) + "px)", "width": nc + "px"
+			});
+		});
+
+
+		var nabc = na + nb + nc;
+		$('.npj4').click(function() {
+			$('.new_pj_bar_slider').css({
+				"left": "auto", "transform": "translateX(" + (nabc + namr3) + "px)", "width": nd + "px"
+			});
+		});
+	
 // ::::::::::::: The About Section ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 	$('.about_title').hide();
@@ -260,7 +349,7 @@ $( document ).ready(function() {
 		var id2 = "#" + id + "-basic";
 		var id3 = "#" + id + "-hover";
 		
-		$(id1).css({"width": "96px", "height": "96px", "background-color": "green", "margin-right": "27px", "margin-left": "27px", "margin-top": "2px", "margin-bottom": "2px", "transition": "0.3s"});
+		$(id1).css({"width": "66px", "height": "66px", "background-color": "green", "margin-right": "17px", "margin-left": "17px", "margin-top": "2px", "margin-bottom": "2px", "transition": "0.3s"});
 		$(id2).css({"transform": "translateY(100%)", "left": "-2px", "transition": "0.3s"});		
 		$(id3).css({"transform": "translateY(0)", "left": "-2px", "transition": "0.3s"});
 		
@@ -276,7 +365,7 @@ $( document ).ready(function() {
 		var id2 = "#" + id + "-basic";
 		var id3 = "#" + id + "-hover";
 		
-		$(id1).css({"width": "100px", "height": "100px", "background-color": "red", "margin-right": "25px", "margin-left": "25px", "margin-top": "0px", "margin-bottom": "0px", "transition": ".3s"});
+		$(id1).css({"width": "70px", "height": "70px", "background-color": "red", "margin-right": "15px", "margin-left": "15px", "margin-top": "0px", "margin-bottom": "0px", "transition": ".3s"});
 		$(id2).css({"margin-left": "auto", "margin-right": "auto", "left": "0px", "top": "0px", "transform": "translateY(0)", "transition": "0.01s"});
 		$(id3).css({"margin-left": "auto", "margin-right": "auto", "left": "0px", "top": "0px", "transform": "translateY(-100%)", "transition": "0.01s"});
 	
@@ -304,7 +393,7 @@ $( document ).ready(function() {
 	});
 	
 
-});
+};
 
 //
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::

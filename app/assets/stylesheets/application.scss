@@ -702,6 +702,7 @@
 //	background-color: black;
 //	opacity: 0.5;
 	top: 0;
+	z-index: +2;
 	left: 0;
 }
 .outer {
@@ -795,6 +796,17 @@
 	margin: 0px;
 }
 
+.new_pj_bar {
+	display: inline-block;
+	justify-content: center;
+	width: 200px;
+	top: 0px;
+	z-index: +1;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+}
+
 .pj_bar_div {
 //	position: relative;
 //	top: 50%;
@@ -818,6 +830,7 @@
 
 .pj_title {
 	margin: 0;
+	text-align: center;
 }
 
 .pj_bar_div .pj_bar .pj_title {
@@ -832,11 +845,22 @@
 	height: 100%;
 	top: 0;
 	left: auto;
-	z-index: -1;
+//	z-index: -1;
 	transition: 0.5s;
 	opacity: 0.7;
 	background: red;
+}
 
+.new_pj_bar_slider {
+	position: absolute;
+	width: 100px;
+	height: 100%;
+	top: 0;
+	left: auto;
+//	z-index: -1;
+	transition: 0.5s;
+	opacity: 0.7;
+	background: red;
 }
 
 /*.pj_bar_div .pj_bar:nth-child(1).active ~ .pj_bar_slider {
@@ -901,11 +925,11 @@
 
 .social {
 //	display: inline-block;
-	height: 100px;
-	width: 100px;
+	height: 70px;
+	width: 70px;
 	background-color: red;
-	margin-right: 25px;
-	margin-left: 25px;
+	margin-right: 15px;
+	margin-left: 15px;
 	overflow: hidden;
 	transition: .5s;
 	position: relative;
@@ -929,8 +953,8 @@
 .social-hover {
 	display: block;
 	transform: translateY(-100%);
-	height: 100px;
-	width: 100px;
+	height: 70px;
+	width: 70px;
 	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
@@ -942,7 +966,7 @@
 
 .social-1 {
   	padding-top: 20px;
-  	width: 50vw;
+//  	width: 50vw;
 	margin-right: auto;
 	margin-left: auto;
 	height: 150px;
