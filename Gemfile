@@ -30,7 +30,7 @@ gem 'paperclip', '~> 5.2.1'
 gem 'fog'
 
 gem 'figaro'
-
+gem 'sqlite3', '~> 1.4', '>= 1.4.1'
 
 
 
@@ -38,7 +38,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-  gem 'sqlite3', '~> 1.4', '>= 1.4.1'
+
 end
 
 group :development do
