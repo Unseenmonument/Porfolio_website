@@ -8,7 +8,6 @@ end
 
 gem 'rails', '~> 5.1.6'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
-#gem 'sqlite3'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -26,11 +25,9 @@ gem 'simple_form'
 gem 'pry'
 gem 'mixitup-rails'
 gem 'paperclip', '~> 5.2.1'
-#gem 'aws-sdk', '~> 2.3'
 gem 'fog'
-
 gem 'figaro'
-gem 'sqlite3', '~> 1.4', '>= 1.4.1'
+
 
 
 
@@ -38,7 +35,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-
+  gem 'sqlite3', '~> 1.4', '>= 1.4.1'
 end
 
 group :development do
