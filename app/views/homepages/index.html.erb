@@ -26,7 +26,7 @@
 
 </nav>
 
-<!-- <div class="meat"> -->
+
 
 	<div id="a1">
 		<div class="section_title">ABOUT</div>
@@ -147,7 +147,7 @@
 								<div class="top_overlay">
 								    <div class="text">
 								    	<h3><%= project.name %></h3>
-								    	<h5 style="color: #D9AB9A;"><%= project.language %></h5>	
+								    	<h4 style="color: #D9AB9A;"><%= project.language %></h4>	
 								    	</div>
 							  	</div>
 							    <div id="<%= project.id %>" class="btm_overlay">
@@ -206,20 +206,20 @@
 									</div>
 								</div>
 								<div class="modal_content">
-									<h4 class="modal_text_name"><%= project.name %></h4>
-									<h5 class="modal_text_extra"><%= project.blurb %></h5>
-									<h6 class="modal_text"><%= project.description %></h6>
+									<h3 class="modal_text_name"><%= project.name %></h3>
+									<h4 class="modal_text_extra"><%= project.blurb %></h4>
+									<div class="modal_text"><%= project.description %></div>
 	
-									<div style="height: 100%;">
+									<div class="top_modal_cont">
 										<div class="container-fluid modal_cont">
-											<div class="row modal_cont_row" style="display: flex, padding: 0, margin: 0, width: 100%, justify-content: flex-end">
-												<div class="col-sm-6" style="display: flex; justify-content: flex-start;">
+											<div class="row modal_cont_row">
+												<div class="col-sm-6 modal_cont_row_child">
 														<a class="
 														modal_atag>" href="<%= project.link %>">
 															<div class="modal_button">View Code</div>
 														</a>
 												</div>
-												<div class="col-sm-6" style="display: flex; justify-content: flex-end;">
+												<div class="col-sm-6 modal_cont_row_child2">
 											<!--		<div class='modal_bottom'>	-->
 														<div class="modal_exit">&#215;</div>
 											<!--		</div> -->

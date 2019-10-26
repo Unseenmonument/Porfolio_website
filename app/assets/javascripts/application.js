@@ -97,25 +97,6 @@ function myfunction() {
 	});
 
 
-/*		function detectmob() {
-		   if(window.innerWidth <= 800 && window.innerHeight <= 600) {
-		     return true;
-		     console.log("true");
-
-		    $(".gitbox5").addClass("col-lg-12");
-		    $('.about_title').show();
-			$('.about_text').show();
-			$('.about_group').show();
-
-		   } else {
-		     return false;
-		     console.log("false");
-		   }
-		}
-
-		detectmob();
-*/
-
  //
  // About Bar Mobile Stuff
  //
@@ -136,9 +117,6 @@ function myfunction() {
 			$(".a3content").css({"margin": "0px", "width": "100%", "padding-right": "0px", "padding-left": "0px"});
 	    	$(".a4").css({"transform": "translateY(-10px)", "-ms-transform": "translateY(-10px)", "-webkit-transform": "translateY(-10px)"});
 
-//	    	$('.about_title').show();
-//			$('.about_text').show();
-//			$('.about_group').show();
 
 		 	$('.about').hide();
 		 	$('.burger_holder').show();
@@ -171,13 +149,12 @@ function myfunction() {
 		 	$('.about').show();
 	 	 	$('.mobile_about_bar').hide();
 
-//			$('.inner-content').css({'position': 'relative', 'background-color': 'white', 'margin': 'auto', 'padding': '0px', 'width': '500px', 'height': 'auto'})
-			
-
 			$('.myform-info').css({'width': '75%'});
 			$('.myform-mail').css({'width': '65%'});
 
-//			$('.c1').css({'height': '350px';});
+			$('.inner-content').css({'height': 'auto', 'width': '70%', 'margin': 'auto'})
+
+
 
 			//
 			// Social Media Icons ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -224,9 +201,6 @@ function myfunction() {
 // Scroll To Section :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //
 
-//	$('.scroll_contact').click(function(){
-//		document.getElementById('a4').scrollIntoView();
-//	});
 
 	function scrollProjects() {
             $('html, body').animate({ scrollTop: $('#a3').offset().top }, 'slow');
@@ -321,8 +295,6 @@ function myfunction() {
 
 //:::::::::::::: Testing The New PJ Bar :::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-
-
 		$('.new_pj_bar').click(function(){
 			$(this).siblings().removeClass('active');
 			$(this).addClass('active');
@@ -358,8 +330,7 @@ function myfunction() {
 
 		var ne = $('.npj5').width();
 			var ne = Number(ne);
-//			var ne = parseInt(ne);
-//			var ne = ne.toFixed(2);
+
 
 			$('.new_pj_bar_slider').css({
 				"left": "auto", "transform": "translateX(" + namr + "px)", "-webkit-transform": "translateX(" + namr + "px)", "-ms-transform": "translateX(" + namr + "px)", "width": na + "px"
@@ -420,8 +391,6 @@ function myfunction() {
 //
 
 
-
-
 	$('#linked').unbind('click').click(function(){
 //		window.location.href = "https://www.linkedin.com/in/kerron-streater/";
 		window.open('https://www.linkedin.com/in/kerron-streater/', '_blank'); 
@@ -464,8 +433,6 @@ function myfunction() {
 			$('.about_group').delay(100).fadeIn(1000);
 			$('.about_title').delay(2000).slideDown(1000);
 			$('.about_text').delay(2000).slideDown(1000);
-//			$('.about_title').delay(2000).fadeIn(1000);
-//			$('.about_text').delay(2000).fadeIn(1000);
 
 	    } else {
 

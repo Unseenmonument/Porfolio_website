@@ -25,7 +25,13 @@ gem 'popper_js', '~> 1.12.9'
 gem 'simple_form'
 gem 'pry'
 gem 'mixitup-rails'
-gem "paperclip", "~> 5.2.1"
+gem 'paperclip', '~> 5.2.1'
+gem 'aws-sdk', '~> 2.3'
+gem 'fog'
+
+gem 'figaro'
+
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -35,6 +41,12 @@ end
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+  gem 'aws-sdk', '~> 2.3'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
