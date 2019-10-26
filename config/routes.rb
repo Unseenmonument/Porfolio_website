@@ -1,12 +1,23 @@
 Rails.application.routes.draw do
   
-  get 'skill/index'
+  get 'contacts/index'
 
-  get 'skill/new'
+  get 'contacts/new'
 
-  get 'skill/edit'
+  get 'contacts/edit'
 
-  get 'skill/show'
+  get 'contacts/create'
+
+  get 'contacts/destroy'
+
+  devise_for :users
+  get 'skills/index'
+
+  get 'skills/new'
+
+  get 'skills/edit'
+
+  get 'skills/show'
 
   get 'projects/index'
   get 'projects/new'
@@ -21,5 +32,6 @@ Rails.application.routes.draw do
 
   resources :contacts
   resources :projects
+  resources :skills
 
 end

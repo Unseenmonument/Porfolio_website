@@ -18,11 +18,19 @@ $( document ).ready(function() {
 	var minRadius = 15;
 
 	var colorArray = [
-	'#FAE3BA',
+
+	'#BF6F7E', 
+	'#F2F2F2',
+	'#6D898C',
+	'#F2F0CE',
+	'#D9AB9A',
+
+/*	'#FAE3BA',
 	'#F1523E',
 	'#F27B35',
 	'#FCA521',
 	'#429953',
+*/
 	];
 
 	window.addEventListener('mousemove', function(event) {
@@ -46,8 +54,9 @@ $( document ).ready(function() {
 		this.color = colorArray[Math.floor(Math.random() * colorArray.length)];
 
 		this.draw = function() {
-				
-			if (this.radius < 15) {
+			
+		
+			if (this.radius < 5) {
 
 				var line_wdth = window.innerWidth + window.innerHeight;
 				c.beginPath;
@@ -59,6 +68,7 @@ $( document ).ready(function() {
 			c.beginPath();
 			c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
 			c.fillStyle = this.color;
+			c.strokeStyle = this.color;
 			c.stroke();
 			c.fill();
 		}
@@ -94,7 +104,7 @@ $( document ).ready(function() {
 
 	function init() {
 		circleArray = [];
-		for (var i = 0; i < 150; i++) {
+		for (var i = 0; i < 80; i++) {
 			var radius = Math.random() * 3 + 1;
 			var x = Math.random() * (innerWidth - radius * 2) + radius;
 			var y = Math.random() * (innerHeight - radius * 2) + radius;

@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Portsite3</title>
+    <title>Kerron Streater</title>
     <%= csrf_meta_tags %>
 
+    <!-- Preloaded content -->
+<!--	<link rel="preload" href="canvas.js" as="script">
+    <link rel="preload" href="application.js" as="script"> -->
+
+    <!-- Icon on Tab -->
+    <link rel="icon" href="http://example.com/favicon.png">
+
+    <!-- Chrome, Firefox OS and Opera Theme Color -->
+	<meta name="theme-color" content="#6D898C">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="body">
+  <body class="body" style="max-width: 100%;">
     <%= yield %>
 
     <div class="social-media">    	
-    	<div class="go_to_top"><h1 class="double_delta">&#171;</h1></div>
+    	<div class="go_to_top"><h1 class="double_delta" style="color: #BF6F7E;">&#171;</h1></div>
 		<div>
-		    <div class="col-lg-5 social-1">
+		    <div class="col-lg-8 social-1">
 			    <div class="social-fix">
 			    	<div class="social-block">
 				    	<div id="linked" class="social">

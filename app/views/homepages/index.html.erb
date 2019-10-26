@@ -1,17 +1,29 @@
-<div>
+<div id="a0">
 	<canvas class="canvas" src="/canvas.js" ></canvas>
 	<div class="intro_name_bg">
-		<h1 class="intro_text"><div class="intro_name">Kerron S. Streater</div> Web Developer Extraordinaire</h1>
-		<div class="canvas_button">Let's Jump Into It<h2 class="canvas_arrow">&#8680;</h2></div>
+		<h3 class="intro_text"><div class="intro_name"><h3>Kerron S. Streater</h3></div> Web Developer Extraordinaire</h3>
+		<div class="canvas_button">Let's Jump Into It<div class="canvas_arrow"><h4>&#8680;</h4></div></div>
 	</div>
 </div>
-<nav class="navbar-expand-sm about_bar sticky-top">
-	<ul class="navbar-nav">
+<nav class="navbar-expand-sm sticky-top">
+	<ul class="navbar-nav about_bar">
 		<li class="nav-item about scroll_about ">ABOUT</li>
 		<li class="nav-item about scroll_skills">SKILLS</li>
 		<li class="nav-item about scroll_projects">PROJECTS</li> 
 		<li class="nav-item about scroll_contact">CONTACT</li>
+		<li class="burger_holder">
+			<div class="hamburger"></div>
+			<div class="hamburger"></div>
+			<div class="hamburger"></div>
+		</li>
 	</ul>
+	<ul class="navbar-nav mobile_about_bar">
+		<li class="nav-item about_mobile scroll_about ">ABOUT</li>
+		<li class="nav-item about_mobile scroll_skills">SKILLS</li>
+		<li class="nav-item about_mobile scroll_projects">PROJECTS</li> 
+		<li class="nav-item about_mobile scroll_contact">CONTACT</li>
+	</ul>
+
 </nav>
 
 <!-- <div class="meat"> -->
@@ -20,7 +32,7 @@
 		<div class="section_title">ABOUT</div>
 		<div class="underline"></div>
 		<div class="intro_holder" >
-			<h1 id="intro"></h1>
+			<h2 id="intro"></h2>
 		</div>
 		<div class="container flex">
 			<div class="row no-gutters help_us">
@@ -86,7 +98,6 @@
 					<% @skills.each do |skill| %>
 						<div class="row skill ">
 							<div class="full-skill-bar"> 
-<!--								<div class="skill-level slide-bar" style="min-width: calc(<%= skill.proficientcy %>px * 3 + 70px);"> -->
 								<div class="skill-level slide-bar" style="min-width: <%= skill.proficientcy %>%;">
 								</div>
 								<div class="skill-name">
@@ -135,12 +146,12 @@
 							<div class="overlay">
 								<div class="top_overlay">
 								    <div class="text">
-								    	<h2><%= project.name %></h2>
-								    	<h3><%= project.language %></h3>	
+								    	<h3><%= project.name %></h3>
+								    	<h5 style="color: #D9AB9A;"><%= project.language %></h5>	
 								    	</div>
 							  	</div>
 							    <div id="<%= project.id %>" class="btm_overlay">
-								    <div class="text_btm">Learn More</div>
+								    <h5 class="text_btm">Learn More</h5>
 								</div>
 							</div>
 						</div>
@@ -155,34 +166,34 @@
 							 <div class="inner-content">
 								<!-- <%= project.id %> -->
 								<div>
-									<div id="picture_carousel" class="carousel" data-ride="carousel">
+									<div id="picture_carousel<%= project.id %>" class="carousel" data-ride="carousel">
 
 												  
 										<!-- The slideshow -->
 										<div class="born">
 											<!-- Indicators -->
 											<ul class="carousel-indicators">
-											    <li data-target="#picture_carousel" data-slide-to="0" class="active"></li>
-											    <li data-target="#picture_carousel" data-slide-to="1"></li>
-											    <li data-target="#picture_carousel" data-slide-to="2"></li>
+											    <li data-target=".picture_carousel" data-slide-to="0" class="active"></li>
+											    <li data-target=".picture_carousel" data-slide-to="1"></li>
+											    <li data-target=".picture_carousel" data-slide-to="2"></li>
 											</ul>
 													
 											<div class="carousel-inner">
 											    <div class="carousel-item active">
-											    	<%= image_tag @project.pic1.url, style: 'height: auto; width: 100%;', :class => "pic1" %>
+											    	<%= image_tag project.pic1.url, style: 'height: auto; width: 100%;', :class => "pic1" %>
 											    </div>
 											    <div class="carousel-item">
-											    	<%= image_tag @project.pic2.url, style: 'height: auto; width: 100%;', :class => "pic2" %>
+											    	<%= image_tag project.pic2.url, style: 'height: auto; width: 100%;', :class => "pic2" %>
 											    </div>
 											    <div class="carousel-item">
-											    	<%= image_tag @project.pic3.url, style: 'height: auto; width: 100%;', :class => "pic3" %>
+											    	<%= image_tag project.pic3.url, style: 'height: auto; width: 100%;', :class => "pic3" %>
 											    </div>
 											    
 											    <!-- Left and right controls -->
-												<a class="carousel-control-prev" href="#picture_carousel" data-slide="prev">
+												<a class="carousel-control-prev" href="#picture_carousel<%= project.id %>" data-slide="prev">
 												    <span class="carousel-control-prev-icon"></span>
 												</a>
-												<a class="carousel-control-next" href="#picture_carousel" data-slide="next">
+												<a class="carousel-control-next" href="#picture_carousel<%= project.id %>" data-slide="next">
 												    <span class="carousel-control-next-icon"></span>
 												</a>
 
@@ -194,10 +205,29 @@
 										</div>
 									</div>
 								</div>
-							
-								<h1><%= project.name %></h1>
-								<h3><%= project.description %></h3>
-								<a href="<%= project.link %>">View Code</a>
+								<div class="modal_content">
+									<h4 class="modal_text_name"><%= project.name %></h4>
+									<h5 class="modal_text_extra"><%= project.blurb %></h5>
+									<h6 class="modal_text"><%= project.description %></h6>
+	
+									<div style="height: 100%;">
+										<div class="container-fluid modal_cont">
+											<div class="row modal_cont_row" style="display: flex, padding: 0, margin: 0, width: 100%, justify-content: flex-end">
+												<div class="col-sm-6" style="display: flex; justify-content: flex-start;">
+														<a class="
+														modal_atag>" href="<%= project.link %>">
+															<div class="modal_button">View Code</div>
+														</a>
+												</div>
+												<div class="col-sm-6" style="display: flex; justify-content: flex-end;">
+											<!--		<div class='modal_bottom'>	-->
+														<div class="modal_exit">&#215;</div>
+											<!--		</div> -->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>	
 							</div>
 
 
@@ -213,19 +243,32 @@
 	<div id="a4">
 		<div class="arrowdown"></div>
 		
-		<div class="meetme col-sm-5">
+		<div class="meetme col-sm-8">
 			<h1 class="section_title">Contact</h1>
 			<div class="underline"></div>
-			<h3>Let's connect and make something awesome together</h3>
+			<h3 style="color: #D9AB9A;">Let's connect and make something awesome together</h3>
 		</div>
 
-		<div class="myform col-sm-5">
+		<div class="myform col-sm-4">
 			<%= form_for @contact do |f| %>
-				<div><%= f.text_field :full_name, class: 'myform-info', placeholder: "Your Name" %></div>
-				<div><%= f.text_field :company, class: 'myform-info', placeholder: "Company (Not required)" %></div>
-				<div><%= f.select(:reason, options_for_select([['Random Bypasser', 'Random'], ['Job Recruiter','Recruiting'], ['Employer Checking You Out', 'Employer']]), {:prompt => 'What Brings You Here?'}, {:class => 'myform-why'}) %></div>
-				<div><%= f.text_area :comment, class: 'myform-text', placeholder: 'Want to tell me something?' %></div>
-				<div><%= f.text_field :email, class: 'myform-mail', placeholder: "Email" %></div>
+
+				<% if @contact.errors.any? %>
+				    <div id="error_explanation">
+				      <div><%= pluralize(fan.errors.count, "error") %> prohibited this fan from being saved:</div>
+
+				      <ul>
+					      <% fan.errors.full_messages.each do |message| %>
+					        <li><div><%= message %></div></li>
+					      <% end %>
+				      </ul>
+				    </div>
+				<% end %>
+				
+				<div><%= f.text_field :full_name, class: 'myform-info form', placeholder: "Your Name", :required => true %></div>
+				<div><%= f.text_field :company, class: 'myform-info form', placeholder: "Company (Not Required)" %></div>
+				<div><%= f.select(:reason, options_for_select([['Random Bypasser', 'Random'], ['Job Recruiter','Recruiting'], ['Employer Checking You Out', 'Employer']]), {:prompt => 'What Brings You Here?'}, {:class => 'myform-why form', :required => true}) %></div>
+				<div><%= f.text_area :comment, class: 'myform-text form', placeholder: 'Want to tell me something?', :required => true %></div>
+				<div><%= f.text_field :email, class: 'myform-mail form', placeholder: "Email", :required => true %></div>
 				  
 				<%= f.submit 'Submit', class: 'myform-button' %>
 			<% end %>

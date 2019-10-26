@@ -1,0 +1,10 @@
+<h1>Skill#edit</h1>
+
+<%= form_for @skill do |f| %>
+	<div><%= f.text_field :name, placeholder: "Skill Name" %></div>
+	<div><%= f.text_field :proficientcy, placeholder: "Skill Proficientcy" %></div>
+	
+	<br>
+
+	<%= f.submit 'Submit' %>
+<% end %>
