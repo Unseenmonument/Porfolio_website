@@ -26,7 +26,7 @@ gem 'simple_form'
 gem 'pry'
 gem 'mixitup-rails'
 gem 'paperclip', '~> 5.2.1'
-#gem 'fog' 
+gem 'fog-aws' 
 gem 'figaro'
 gem 'pg'
 

@@ -9,7 +9,7 @@ class AddMainPicToProjects < ActiveRecord::Migration[5.1]
 	  	add_column :contacts, :full_name, :string
 	  	add_column :contacts, :comment, :string
 	end
-
+# all of this was uncommented
 	def change
 	  	remove_column :contacts, :f_name, :string
 	  	remove_column :contacts, :l_name, :string
