@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191020185555) do
+ActiveRecord::Schema.define(version: 20191027054123) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
     t.string "name"
@@ -27,8 +30,6 @@ ActiveRecord::Schema.define(version: 20191020185555) do
     t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "full_name"
-    t.string "comment"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -39,6 +40,10 @@ ActiveRecord::Schema.define(version: 20191020185555) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "blurb"
+    t.string "pic1"
+    t.string "pic2"
+    t.string "pic3"
+    t.string "main_pic"
     t.string "pic1_file_name"
     t.string "pic1_content_type"
     t.integer "pic1_file_size"
@@ -55,10 +60,6 @@ ActiveRecord::Schema.define(version: 20191020185555) do
     t.string "main_pic_content_type"
     t.integer "main_pic_file_size"
     t.datetime "main_pic_updated_at"
-    t.string "pic1"
-    t.string "pic2"
-    t.string "pic3"
-    t.string "main_pic"
   end
 
   create_table "skills", force: :cascade do |t|
