@@ -8,7 +8,7 @@ class SkillsController < ApplicationController
   end
 
   def new
-  	@skill = Skill.New
+  	@skill = Skill.new
   end
 
   def edit
