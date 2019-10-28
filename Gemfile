@@ -37,7 +37,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
-#  gem 'sqlite3', '~> 1.4.1'#, '>= 1.4.1'
+#  gem 'sqlite3'#, '~> 1.4', '>= 1.4.1'
 	gem 'dotenv-rails'
 end
 
@@ -46,7 +46,7 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
+#  gem 'pg'
   gem 'rails_12factor'
   gem 'aws-sdk', '~> 2.3'
 end
