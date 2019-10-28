@@ -40,7 +40,7 @@ class SkillsController < ApplicationController
 
   def create
 
-  	@skill = Skill.new(skill_params)
+  	@skill = Skill.new(skills_params)
 
     respond_to do |format|
       if @skill.save

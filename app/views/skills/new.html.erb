@@ -1,2 +1,6 @@
 <h1>Skill#new</h1>
-<p>Find me in app/views/skill/new.html.erb</p>
+<%= form_for(@skill, multipart: true) do |f| %>
+	<div><%= f.text_field :name, placeholder: "Skill Name" %></div>
+	<div><%= f.text_field :proficientcy, placeholder: "proficientcy" %></div>
+	<%= f.submit 'Submit' %>
+<% end %>
