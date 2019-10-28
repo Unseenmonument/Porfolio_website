@@ -38,6 +38,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
 #  gem 'sqlite3', '~> 1.4.1'#, '>= 1.4.1'
+	gem 'dotenv-rails'
 end
 
 group :development do
