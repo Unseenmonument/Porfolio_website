@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '2.3.3' ## See https://devcenter.heroku.com/articles/ruby-versions for more information.
+#ruby '2.3.3' ## See https://devcenter.heroku.com/articles/ruby-versions for more information.
 
 gem 'rails', '~> 5.1.6'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
