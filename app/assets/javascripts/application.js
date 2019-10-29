@@ -62,26 +62,26 @@ $( document ).ready(function() {
 		    } else {
 
 		    }
+
+		    //This is here for the about section, breaks if not in this resize section
+		    if  ( $(".about_group").isInViewport() ) {
+
+				$('.about_group').delay(100).fadeIn(1000);
+				$('.about_title').delay(2000).slideDown(1000);
+				$('.about_text').delay(2000).slideDown(1000);
+
+		    } else {
+
+		    }
 		 });
 	// End of Typewriter code
 
 	// About Section
+		$('.about_title').hide();
+		$('.about_text').hide();
+		$('.about_group').hide();
 
-	$('.about_title').hide();
-	$('.about_text').hide();
-	$('.about_group').hide();
-	$(window).on('resize scroll', function() {
 
-	    if  ( $(".about_group").isInViewport() ) {
-
-			$('.about_group').delay(100).fadeIn(1000);
-			$('.about_title').delay(2000).slideDown(1000);
-			$('.about_text').delay(2000).slideDown(1000);
-
-	    } else {
-
-	    }
-	 });
 
 	// About Bar Slider
 		var na = $('.npj1').width();
@@ -123,11 +123,9 @@ function myfunction() {
 //	
 // ::::::::::::: The About Section ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //
-
-/*
-	$('.about_title').hide();
-	$('.about_text').hide();
-	$('.about_group').hide();
+//	$('.about_title').hide();
+//	$('.about_text').hide();
+//	$('.about_group').hide();
 
 
 	// If DIV is in viewport, shows this section
@@ -141,7 +139,7 @@ function myfunction() {
 	  return elementBottom > viewportTop && elementTop < viewportBottom;
 	};
 
-
+/*
 	$(window).on('resize scroll', function() {
 
 	    if  ( $(".about_group").isInViewport() ) {
@@ -154,10 +152,7 @@ function myfunction() {
 
 	    }
 	 });
-
-	/*
-
-
+*/
 
 //
 // End of About section :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
