@@ -24,31 +24,76 @@
 
 $( document ).ready(myfunction);
 
-// Here So The Typewriter Effect doesnt go all wonky
+// Code put here specifically only needs to run at page load, not on resize or scroll
 $( document ).ready(function() {
-	
-	var type_count = 0;
-	$('#a1').hover(typeWriter);
-		var i = 0;
-		var txt = 'ALLOW ME TO INTRODUCE MYSELF...';
-		var speed = 200;
 
-	function typeWriter() {
-		if (i < txt.length && type_count < txt.length) {
-		    document.getElementById("intro").innerHTML += txt.charAt(i);
-		    i++;
-		    type_count++;
-		    setTimeout(typeWriter, speed);
+	// The Typewriter Effect for the about section	
+		var type_count = 0;
+		$('#a1').hover(typeWriter);
+			var i = 0;
+			var txt = 'ALLOW ME TO INTRODUCE MYSELF...';
+			var speed = 200;
+
+		function typeWriter() {
+			if (i < txt.length && type_count < txt.length) {
+			    document.getElementById("intro").innerHTML += txt.charAt(i);
+			    i++;
+			    type_count++;
+			    setTimeout(typeWriter, speed);
+			};
 		};
-	};
 
-		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+		$.fn.isInViewport = function() {
+		  var elementTop = $(this).offset().top;
+		  var elementBottom = elementTop + $(this).outerHeight();
+
+		  var viewportTop = $(window).scrollTop();
+		  var viewportBottom = viewportTop + $(window).height();
+
+		  return elementBottom > viewportTop && elementTop < viewportBottom;
+		};
+
+
+		$(window).on('resize scroll', function() {
+
+		    if  ( $(".intro_holder").isInViewport() ) {
+				typeWriter();
+		    } else {
+
+		    }
+		 });
+	// End of Typewriter code
+
+	// About Bar Slider
+		var na = $('.npj1').width();
+		var na = na.toFixed(0);
+		var na = Number(na);
+
+			var	namr = $('.npj1').css('marginRight');
+			var	namr = parseFloat(namr);
+			var	namr = namr.toFixed(0);
+			var namr = Number(namr);
+
+		$('.new_pj_bar_slider').css({
+				"left": "auto", "transform": "translateX(" + namr + "px)", "-webkit-transform": "translateX(" + namr + "px)", "-ms-transform": "translateX(" + namr + "px)", "width": na + "px"
+			});
+		$('.npj1').css({'color': 'white'});	
+	// End of About Bar Slider
+
+
+
+
+
+
+
+/*		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 		if (isMobile) { 
-			typeWriter();
+//			typeWriter();
 		} else { 
 			
 		}
-
+*/
 
 });
 // end of that little fix
@@ -64,18 +109,36 @@ function myfunction() {
 	$('.about_text').hide();
 	$('.about_group').hide();
 
-/*	$('#a1').hover(function() {
-		$('.about_group').delay(100).fadeIn(1000);
-		$('.about_title').delay(2000).fadeIn(1000);
-		$('.about_text').delay(2000).fadeIn(1000);
-	});
-*/
 
-//	$('.pic2').hide();
-//	$('.pic3').hide();
+	// If DIV is in viewport, shows this section
+	$.fn.isInViewport = function() {
+	  var elementTop = $(this).offset().top;
+	  var elementBottom = elementTop + $(this).outerHeight();
+
+	  var viewportTop = $(window).scrollTop();
+	  var viewportBottom = viewportTop + $(window).height();
+
+	  return elementBottom > viewportTop && elementTop < viewportBottom;
+	};
+
+
+	$(window).on('resize scroll', function() {
+
+	    if  ( $(".about_group").isInViewport() ) {
+
+			$('.about_group').delay(100).fadeIn(1000);
+			$('.about_title').delay(2000).slideDown(1000);
+			$('.about_text').delay(2000).slideDown(1000);
+
+	    } else {
+
+	    }
+	 });
+
+
 
 //
-// End of About section
+// End of About section :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 //
 
 
@@ -304,7 +367,7 @@ function myfunction() {
 		var na = $('.npj1').width();
 		var na = na.toFixed(0);
 		var na = Number(na);
-		console.log(na);
+//		console.log(na);
 
 			var	namr = $('.npj1').css('marginRight');
 			var	namr = parseFloat(namr);
@@ -331,11 +394,12 @@ function myfunction() {
 		var ne = $('.npj5').width();
 			var ne = Number(ne);
 
-
+/*
 			$('.new_pj_bar_slider').css({
 				"left": "auto", "transform": "translateX(" + namr + "px)", "-webkit-transform": "translateX(" + namr + "px)", "-ms-transform": "translateX(" + namr + "px)", "width": na + "px"
 			});
-			$('.npj1').css({'color': 'white'});		
+			$('.npj1').css({'color': 'white'});
+*/		
 
 
 		$('.npj1').click(function() {
@@ -359,7 +423,7 @@ function myfunction() {
 
 
 		var nab = na + nb;
-		console.log(nab);
+//		console.log(nab);
 		$('.npj3').click(function() {
 			$('.new_pj_bar_slider').css({
 				"left": "auto", "transform": "translateX(" + (nab + namr2) + "px)", "-webkit-transform": "translateX(" + (nab + namr2) + "px)", "-ms-transform": "translateX(" + (nab + namr2) + "px)", "width": nc + "px"
@@ -415,29 +479,7 @@ function myfunction() {
 // ::::::::::::: Test If Div Is In Viewport :::::::::::::::::::::::::::::::::::::::::::
 //
 
-	$.fn.isInViewport = function() {
-	  var elementTop = $(this).offset().top;
-	  var elementBottom = elementTop + $(this).outerHeight();
 
-	  var viewportTop = $(window).scrollTop();
-	  var viewportBottom = viewportTop + $(window).height();
-
-	  return elementBottom > viewportTop && elementTop < viewportBottom;
-	};
-
-
-	$(window).on('resize scroll', function() {
-
-	    if  ( $(".about_group").isInViewport() ) {
-
-			$('.about_group').delay(100).fadeIn(1000);
-			$('.about_title').delay(2000).slideDown(1000);
-			$('.about_text').delay(2000).slideDown(1000);
-
-	    } else {
-
-	    }
-	 });
 
 };
 

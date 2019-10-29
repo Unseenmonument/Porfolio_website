@@ -6,11 +6,18 @@
 	<div><%= f.text_field :blurb, placeholder: "blurb" %></div>
 	<div><%= f.text_field :link, placeholder: "link" %></div>
 	
+	<br>
 	<%= f.file_field :main_pic %>
 
+	<br>
+	<br>
+
 	<%= f.file_field :pic1 %>
+	<br>
 	<%= f.file_field :pic2 %>
+	<br>
 	<%= f.file_field :pic3 %>
+	<br>
 
 	<%= f.submit 'Submit' %>
 <% end %>
