@@ -1119,12 +1119,17 @@
 	transition: 0.3s;
 	-webkit-transition: 0.3s;
 	
-	transform: translateY(-25px);
-	-webkit-transform: translateY(-25px);
-	-ms-transform: translateY(-25px);
+//	transform: translateY(-25px);
+//	-webkit-transform: translateY(-25px);
+//	-ms-transform: translateY(-25px);
 
-	margin-left: auto;
-	margin-right: auto;
+	transform: translate(50%, -25px) rotate(90deg);
+	-webkit-transform: translate(50%, -25px) rotate(90deg);
+	-ms-transform: translate(50%, -25px) rotate(90deg);
+
+
+//	margin-left: auto;
+//	margin-right: auto;
 	cursor: pointer;
 //	align-content: center;
 }

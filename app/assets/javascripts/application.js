@@ -522,7 +522,7 @@ function myfunction() {
 //				var bro.include
 //				var bro = bro.toString;	
 
-/*	I was extremely tired and wrote lots of stupid code, here's a sample
+/*	I was extremely tired and wrote lots of stupid code, here's a sample:
 				var a = "a"; var aa = "A";
 				var b = "b"; var bb = "B";
 				var c = "c"; var cc = "C";
