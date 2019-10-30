@@ -263,10 +263,13 @@
 				      </ul>
 				    </div>
 				<% end %>
-				
-				<div><%= f.text_field :full_name, class: 'myform-info form', placeholder: "Your Name", :required => true %></div>
+
+				<div class="t-tooltip">
+					<span class="tooltiptext">Hey, Silly, Letters Only!</span>
+				</div>				
+				<div><%= f.text_field :full_name, class: 'myform-info myform-name form', placeholder: "Your Name", :required => true %></div>
 				<div><%= f.text_field :company, class: 'myform-info form', placeholder: "Company (Not Required)" %></div>
-				<div><%= f.select(:reason, options_for_select([['Random Bypasser', 'Random'], ['Job Recruiter','Recruiting'], ['Employer Checking You Out', 'Employer']]), {:prompt => 'What Brings You Here?'}, {:class => 'myform-why form', :required => true}) %></div>
+				<div><%= f.select(:reason, options_for_select([['Random Bypasser', 'Random'], ['Job Recruiter','Recruiting'], ['Employer Checking You Out', 'Employer'], ['Uh... You Told Me To', 'Kerron']]), {:prompt => 'What Brings You Here?'}, {:class => 'myform-why form', :required => true}) %></div>
 				<div><%= f.text_area :comment, class: 'myform-text form', placeholder: 'Want to tell me something?', :required => true %></div>
 				<div><%= f.text_field :email, class: 'myform-mail form', placeholder: "Email", :required => true %></div>
 				  

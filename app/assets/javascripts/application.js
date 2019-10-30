@@ -27,6 +27,12 @@ $( document ).ready(myfunction);
 // Code put here specifically only needs to run at page load, not on resize or scroll
 $( document ).ready(function() {
 
+	
+        $(document).on("turbolinks:load",function(){
+		  $('.t-tooltip').tooltip();
+		})
+    
+
 	// The Typewriter Effect for the about section	
 		var type_count = 0;
 		$('#a1').hover(typeWriter);
@@ -73,6 +79,16 @@ $( document ).ready(function() {
 		    } else {
 
 		    }
+
+		    if  ( $(".skill_column").isInViewport() ) {
+		    	$(".slide-bar").css({ "left": "-300px", "animation": "slide 1.5s forwards", "animation-delay": "2s"});
+		    
+
+		    } else {
+
+		    }
+
+		    
 		 });
 	// End of Typewriter code
 
@@ -98,6 +114,8 @@ $( document ).ready(function() {
 			});
 		$('.npj1').css({'color': 'white'});	
 	// End of About Bar Slider
+
+
 
 
 
@@ -493,10 +511,37 @@ function myfunction() {
 	});
 	
 //
-// ::::::::::::: Test If Div Is In Viewport :::::::::::::::::::::::::::::::::::::::::::
+// ::::::::::::: Prevent unwanted form input :::::::::::::::::::::::::::::::::::::::::::
 //
 
+	$('.myform-name').focus( function() {
+		var base =document.querySelector('.myform-name')
+		base.addEventListener('keydown', function (event) {
+		
+		    // detecting if something other than a letter is pressed
+		    if ((event.keyCode > 47 && event.keyCode < 58) || 
+		    	(event.keyCode > 95 && event.keyCode < 105) ||
+		    	(event.keyCode === 219) ||
+		    	(event.keyCode === 220) ||
+		    	(event.keyCode === 221) ||
+		    	(event.keyCode === 222) ||
+		    	(event.keyCode === 186) ||
+		    	(event.keyCode === 187) ||
+		    	(event.keyCode === 188) ||
+		    	(event.keyCode === 189) ||
+		    	(event.keyCode === 191) || 
+		    	(event.keyCode === 192)) {
 
+			        // prevent default behaviour
+			        event.preventDefault();
+			        $('.myform-info').on('focusOut keydown mouseenter mouseleave click', function(){
+						$('.tooltiptext').css({'visibility': 'hidden'});
+					});
+			        $('.tooltiptext').css({'visibility': 'visible'});			        
+		        };
+		});
+//		window.unbind();
+	});
 
 };
 

@@ -511,9 +511,9 @@
 }
 
 .slide-bar {
-    left: -300px;
-    animation: slide 1.5s forwards;
-    animation-delay: 2s;
+    left: -350px;
+//    animation: slide 1.5s forwards;
+//    animation-delay: 2s;
 }
 
 .skill-percent {
@@ -618,7 +618,46 @@
 	color: #BF6F7E;
 	margin-left: auto;
 	margin-right: auto;
+	cursor: pointer;
 }
+
+.myform-button:hover {
+	background-color: #BF6F7E;
+	color: #F2F2F2;
+}
+
+
+
+.t-tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  height: 2px;
+}
+
+.t-tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #BF6F7E;
+  color: #F2F2F2;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.t-tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
 
 //
 //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -1094,6 +1133,7 @@
 }
 
 .double_delta {
+	position: absolute;
 	width: 60px;
 	height: 60px;
 	font-size: 80px;
