@@ -581,11 +581,11 @@ function myfunction() {
 	});
 
 
-/*	$('.myform-name').focus( function() {
+	$('.myform-name').focus( function() {
 		var base = document.querySelector('.myform-name')
 		base.addEventListener('keydown', function (event) {
 
-		
+/*		
 		    // detecting if something other than a letter is pressed
 		    if ((event.keyCode > 47 && event.keyCode < 58) || 
 		    	(event.keyCode > 95 && event.keyCode < 105) ||
@@ -600,7 +600,7 @@ function myfunction() {
 		    	(event.keyCode === 191) || 
 		    	(event.keyCode === 192)) {
 */
-	/*	    if ((event.which > 47 && event.which < 58) || 
+		    if ((event.which > 47 && event.which < 58) || 
 		    	(event.which > 95 && event.which < 105) ||
 		    	(event.which === 219) ||
 		    	(event.which === 220) ||
@@ -612,9 +612,9 @@ function myfunction() {
 		    	(event.which === 189) ||
 		    	(event.which === 191) || 
 		    	(event.which === 192)) {
-	*/
+	
 		//    		alert(event.keyCode);
-/*
+
 			        // prevent default behaviour
 			        event.preventDefault();
 			        $('.myform-info').on('focusOut keydown mouseenter mouseleave click', function(){
@@ -625,7 +625,7 @@ function myfunction() {
 		});
 
 	});
-*/
+
 };
 
 //
