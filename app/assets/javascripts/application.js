@@ -80,7 +80,7 @@ $( document ).ready(function() {
 
 		    }
 
-		    if  ( $(".skill_column").isInViewport() ) {
+		    if  ( $(".man_myth").isInViewport() ) {
 		    	$(".slide-bar").css({ "left": "-300px", "animation": "slide 1.5s forwards", "animation-delay": "2s"});
 		    
 
