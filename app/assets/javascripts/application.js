@@ -513,10 +513,78 @@ function myfunction() {
 //
 // ::::::::::::: Prevent unwanted form input :::::::::::::::::::::::::::::::::::::::::::
 //
+	$('.myform-name').unbind().on('input', function() {
 
-	$('.myform-name').focus( function() {
-		var base =document.querySelector('.myform-name')
+//				var no = [",", ".", "/", ";", "'", "[", "]", , "=", "-", "0", "9", "8", "7", "6", "5", "4", "3", "2", "1", "`", "~", "<", ">", "?", ":", '"', "{", "}", "|", "+", "_", ")", "(", "*", "&", "^", "%", "$", "#" "@", "!", "'"]
+
+//				var bro = this.value;
+
+//				var bro.include
+//				var bro = bro.toString;	
+
+/*	I was extremely tired and wrote lots of stupid code, here's a sample
+				var a = "a"; var aa = "A";
+				var b = "b"; var bb = "B";
+				var c = "c"; var cc = "C";
+				var d = "d"; var dd = "D";
+				var e = "e"; var ee = "E";
+				var f = "f"; var ff = "F";
+				var g = "g"; var gg = "G";
+				var h = "h"; var hh = "H";
+				var i = "i"; var ii = "I";
+				var j = "j"; var jj = "J";
+				var k = "k"; var kk = "K";
+				var l = "l"; var ll = "L";
+				var m = "m"; var mm = "M";
+				var n = "n"; var nn = "N";
+				var o = "o"; var oo = "O";
+				var p = "p"; var pp = "P";	
+				var q = "q"; var qq = "Q";
+				var r = "r"; var rr = "R";
+				var s = "s"; var ss = "S";
+				var t = "t"; var tt = "T";
+				var u = "u"; var uu = "U";
+				var v = "v"; var vv = "V";
+				var w = "w"; var ww = "W";
+				var x = "x"; var xx = "X";
+				var y = "y"; var yy = "Y";
+				var z = "z"; var zz = "Z";
+							
+				console.log(bro + "1");
+				if ((bro === a || aa)  |
+				(bro === b || bb) | (bro === c || cc) | (bro === d || dd) |
+				(bro === e || ee) | (bro === f || ff) | (bro === g || gg) |
+				(bro === h || hh) | (bro === i || ii) | (bro === j || jj) |
+				(bro === k || kk) | (bro === l || ll) | (bro === m || mm) |
+				(bro === n || nn) | (bro === o || oo) | (bro === p || pp) |
+				(bro === q || qq) | (bro === r || rr) | (bro === s || ss) |
+				(bro === t || tt) | (bro === u || uu) | (bro === v || vv) |
+				(bro === w || ww) | (bro === x || xx) | (bro === y || yy) |
+				(bro === z || zz) | (this.include)){
+
+				 		console.log(bro + " does equal " + a);
+						$('.tooltiptext').css({'visibility': 'hidden'});
+				
+				} else if (bro !== a) {
+				
+						console.log(bro + " doesn't equal " + a);
+						$('.tooltiptext').css({'visibility': 'visible'});
+				
+				};
+*/
+				function Check(me) {
+					me.value = me.value.replace(/[0-9, >, <, ?, :, =, -, ", {, }, |, +, _, ~, !, @, \, #, $, %, ^, &, *, (, `, ', ), ., /, ;, "[" ]/g, "");
+				};	
+				
+				Check(this);				
+
+	});
+
+
+/*	$('.myform-name').focus( function() {
+		var base = document.querySelector('.myform-name')
 		base.addEventListener('keydown', function (event) {
+
 		
 		    // detecting if something other than a letter is pressed
 		    if ((event.keyCode > 47 && event.keyCode < 58) || 
@@ -531,7 +599,22 @@ function myfunction() {
 		    	(event.keyCode === 189) ||
 		    	(event.keyCode === 191) || 
 		    	(event.keyCode === 192)) {
-
+*/
+	/*	    if ((event.which > 47 && event.which < 58) || 
+		    	(event.which > 95 && event.which < 105) ||
+		    	(event.which === 219) ||
+		    	(event.which === 220) ||
+		    	(event.which === 221) ||
+		    	(event.which === 222) ||
+		    	(event.which === 186) ||
+		    	(event.which === 187) ||
+		    	(event.which === 188) ||
+		    	(event.which === 189) ||
+		    	(event.which === 191) || 
+		    	(event.which === 192)) {
+	*/
+		//    		alert(event.keyCode);
+/*
 			        // prevent default behaviour
 			        event.preventDefault();
 			        $('.myform-info').on('focusOut keydown mouseenter mouseleave click', function(){
@@ -540,9 +623,9 @@ function myfunction() {
 			        $('.tooltiptext').css({'visibility': 'visible'});			        
 		        };
 		});
-//		window.unbind();
-	});
 
+	});
+*/
 };
 
 //
