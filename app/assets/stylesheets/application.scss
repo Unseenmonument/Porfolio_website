@@ -566,6 +566,14 @@
 // Section 4: The Contact Form --------------------------------------------------
 //
 
+.myform-why {
+	webkit-appearance: none;
+	height: 30px;
+	width: 100%;
+	padding-left: 10px;
+	margin-bottom: 12px;
+}
+
 .form {
 	color: #6D898C;
 	background-color: #F2F2F2;
@@ -581,13 +589,6 @@
 .myform-info {
 	height: 30px;
 	width: 75%;
-	padding-left: 10px;
-	margin-bottom: 12px;
-}
-
-.myform-why {
-	height: 30px;
-	width: 100%;
 	padding-left: 10px;
 	margin-bottom: 12px;
 }
