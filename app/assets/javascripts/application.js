@@ -81,7 +81,7 @@ $( document ).ready(function() {
 		    }
 
 		    if  ( $(".man_myth").isInViewport() ) {
-		    	$(".slide-bar").css({ "left": "-300px", "animation": "slide 1.5s forwards", "animation-delay": "2s"});
+		    	$(".slide-bar").css({ "left": "-300px", "animation": "slide 1.5s forwards", "animation-delay": "0.5s"});
 		    
 
 		    } else {
