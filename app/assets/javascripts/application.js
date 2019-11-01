@@ -20,122 +20,6 @@
 //= require mixitup
 //= require_tree .
 
-
-
-$( document ).ready(myfunction);
-
-// Code put here specifically only needs to run at page load, not on resize or scroll
-$( document ).ready(function() {
-
-	
-        $(document).on("turbolinks:load",function(){
-		  $('.t-tooltip').tooltip();
-		})
-    
-
-	// The Typewriter Effect for the about section	
-		var type_count = 0;
-		$('#a1').hover(typeWriter);
-			var i = 0;
-			var txt = 'ALLOW ME TO INTRODUCE MYSELF...';
-			var speed = 200;
-
-		function typeWriter() {
-			if (i < txt.length && type_count < txt.length) {
-			    document.getElementById("intro").innerHTML += txt.charAt(i);
-			    i++;
-			    type_count++;
-			    setTimeout(typeWriter, speed);
-			};
-		};
-
-
-		$.fn.isInViewport = function() {
-		  var elementTop = $(this).offset().top;
-		  var elementBottom = elementTop + $(this).outerHeight();
-
-		  var viewportTop = $(window).scrollTop();
-		  var viewportBottom = viewportTop + $(window).height();
-
-		  return elementBottom > viewportTop && elementTop < viewportBottom;
-		};
-
-
-		$(window).on('resize scroll', function() {
-
-		    if  ( $(".intro_holder").isInViewport() ) {
-				typeWriter();
-		    } else {
-
-		    }
-
-		    //This is here for the about section, breaks if not in this resize section
-		    if  ( $(".about_group").isInViewport() ) {
-
-				$('.about_group').delay(100).fadeIn(1000);
-				$('.about_title').delay(2000).slideDown(1000);
-				$('.about_text').delay(2000).slideDown(1000);
-
-		    } else {
-
-		    }
-
-		    if  ( $(".man_myth").isInViewport() ) {
-		    	$(".slide-bar").css({ "left": "-300px", "animation": "slide 1.5s forwards", "animation-delay": "0.5s"});
-		    
-
-		    } else {
-
-		    }
-
-		    
-		 });
-	// End of Typewriter code
-
-	// About Section
-		$('.about_title').hide();
-		$('.about_text').hide();
-		$('.about_group').hide();
-
-
-
-	// About Bar Slider
-		var na = $('.npj1').width();
-		var na = na.toFixed(0);
-		var na = Number(na);
-
-			var	namr = $('.npj1').css('marginRight');
-			var	namr = parseFloat(namr);
-			var	namr = namr.toFixed(0);
-			var namr = Number(namr);
-
-		$('.new_pj_bar_slider').css({
-				"left": "auto", "transform": "translateX(" + namr + "px)", "-webkit-transform": "translateX(" + namr + "px)", "-ms-transform": "translateX(" + namr + "px)", "width": na + "px"
-			});
-		$('.npj1').css({'color': 'white'});	
-	// End of About Bar Slider
-
-
-
-
-
-
-
-
-
-/*		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-		if (isMobile) { 
-//			typeWriter();
-		} else { 
-			
-		}
-*/
-
-});
-// end of that little fix
-
-$( window ).resize(myfunction);
-
 function myfunction() {
 
 //	
@@ -627,6 +511,104 @@ function myfunction() {
 	});
 
 };
+
+$( document ).ready(myfunction);
+
+$( window ).resize(myfunction);
+
+// Code put here specifically only needs to run at page load, not on resize or scroll
+$( document ).ready(function() {
+
+	
+        $(document).on("turbolinks:load",function(){
+		  $('.t-tooltip').tooltip();
+		})
+    
+
+	// The Typewriter Effect for the about section	
+		var type_count = 0;
+		$('#a1').hover(typeWriter);
+			var i = 0;
+			var txt = 'ALLOW ME TO INTRODUCE MYSELF...';
+			var speed = 200;
+
+		function typeWriter() {
+			if (i < txt.length && type_count < txt.length) {
+			    document.getElementById("intro").innerHTML += txt.charAt(i);
+			    i++;
+			    type_count++;
+			    setTimeout(typeWriter, speed);
+			};
+		};
+
+
+		$.fn.isInViewport = function() {
+		  var elementTop = $(this).offset().top;
+		  var elementBottom = elementTop + $(this).outerHeight();
+
+		  var viewportTop = $(window).scrollTop();
+		  var viewportBottom = viewportTop + $(window).height();
+
+		  return elementBottom > viewportTop && elementTop < viewportBottom;
+		};
+
+
+		$(window).on('resize scroll', function() {
+
+		    if  ( $(".intro_holder").isInViewport() ) {
+				typeWriter();
+		    } else {
+
+		    }
+
+		    //This is here for the about section, breaks if not in this resize section
+		    if  ( $(".about_group").isInViewport() ) {
+
+				$('.about_group').delay(100).fadeIn(1000);
+				$('.about_title').delay(2000).slideDown(1000);
+				$('.about_text').delay(2000).slideDown(1000);
+
+		    } else {
+
+		    }
+
+		    if  ( $(".man_myth").isInViewport() ) {
+		    	$(".slide-bar").css({ "left": "-300px", "animation": "slide 1.5s forwards", "animation-delay": "0.5s"});
+		    
+
+		    } else {
+
+		    }
+
+		    
+		 });
+	// End of Typewriter code
+
+	// About Section
+		$('.about_title').hide();
+		$('.about_text').hide();
+		$('.about_group').hide();
+
+
+
+	// About Bar Slider
+		var na = $('.npj1').width();
+		var na = na.toFixed(0);
+		var na = Number(na);
+
+			var	namr = $('.npj1').css('marginRight');
+			var	namr = parseFloat(namr);
+			var	namr = namr.toFixed(0);
+			var namr = Number(namr);
+
+		$('.new_pj_bar_slider').css({
+				"left": "auto", "transform": "translateX(" + namr + "px)", "-webkit-transform": "translateX(" + namr + "px)", "-ms-transform": "translateX(" + namr + "px)", "width": na + "px"
+			});
+		$('.npj1').css({'color': 'white'});	
+	// End of About Bar Slider
+
+});
+// end of that little fix
 
 //
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
