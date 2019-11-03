@@ -6,7 +6,8 @@
 #
 default: &default
   adapter: postgresql
-  database: my_database_production
+#  database: my_database_production
+  database: my_database_dev  
   pool: 5
 #  adapter: sqlite3
 #  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -16,7 +17,8 @@ development:
 #  <<: *default
 #  database: db/development.sqlite3
   adapter: postgresql
-  database: my_database_production
+#  database: my_database_production
+  database: my_database_dev
   username: postgres
   password: Unseenm1
   pool: 5
@@ -29,7 +31,8 @@ test:
 #  <<: *default
 #  database: db/test.sqlite3
   adapter: postgresql
-  database: my_database_production
+  database: my_database_dev
+#  database: my_database_production
   username: postgres
   password: Unseenm1
   pool: 5
