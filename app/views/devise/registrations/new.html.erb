@@ -7,7 +7,7 @@
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;">
-    Sign up
+    No Sign Up - Log In Only
   </h2>
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
@@ -33,9 +33,9 @@
                   required: true,
                   hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                   input_html: { autocomplete: "new-password", class: "form" } %>
-      <%= f.input :password_confirmation,
+ <!--     <%= f.input :password_confirmation,
                   required: true,
-                  input_html: { autocomplete: "new-password", class: "form" } %>
+                  input_html: { autocomplete: "new-password", class: "form" } %> -->
     </div>
 
     <div class="form-actions">
