@@ -7,7 +7,7 @@ end
 
 #ruby '2.3.3' ## See https://devcenter.heroku.com/articles/ruby-versions for more information.
 
-## gem 'therubyracer' , platforms: :ruby
+#gem 'therubyracer', '~> 0.12.3'
 gem 'rails', '~> 5.1.6'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 #gem 'sqlite3', '~> 1.4.1' #, '>= 1.4.1'
@@ -31,8 +31,11 @@ gem 'paperclip', '~> 5.2.1'
 gem 'fog-aws' 
 gem 'figaro'
 gem 'pg'
+#gem 'javascript', '~> 0.1.0'
 ## gem 'responders', '~> 2.3'
 ## gem 'rubyzip', '~> 1.2', '>= 1.2.2'
+gem 'node', '~> 1.0'
+#gem 'nodejs-rails', '~> 0.0.1'
 
 
 

@@ -518,6 +518,7 @@ $( window ).resize(myfunction);
 
 // Code put here specifically only needs to run at page load, not on resize or scroll
 $( document ).ready(function() {
+		$(".blank").hide();
 
 	
         $(document).on("turbolinks:load",function(){
