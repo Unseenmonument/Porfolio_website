@@ -92,10 +92,10 @@ function myfunction() {
 
 		var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 		if (isMobile) {
-	    	$(".gitbox5").addClass("col-lg-12");
-	    	$(".gitbox5").css({"width": "100%", "padding-left": "0px", "padding-right": "0px"});
-	    	$(".project_row").css({"width": "100%", "padding-left": "0px", "padding-right": "0px", "margin": "0"});
-	    	$(".main_pic").css({"width": "100%", "padding-left": "0px", "padding-right": "0px"});
+//	    	$(".gitbox5").addClass("col-lg-12");
+//	    	$(".gitbox5").css({"width": "100%", "padding-left": "0px", "padding-right": "0px"});
+//	    	$(".project_row").css({"width": "100%", "padding-left": "0px", "padding-right": "0px", "margin": "0"});
+//	    	$(".main_pic").css({"width": "100%", "padding-left": "0px", "padding-right": "0px"});
 			$(".a3content").css({"margin": "0px", "width": "100%", "padding-right": "0px", "padding-left": "0px"});
 	    	$(".a4").css({"transform": "translateY(-10px)", "-ms-transform": "translateY(-10px)", "-webkit-transform": "translateY(-10px)"});
 
@@ -117,10 +117,10 @@ function myfunction() {
  	
 
 		} else {
-	    	$(".gitbox5").removeClass("col-lg-12");
-	    	$(".gitbox5").css({"width": "400px", "padding-left": "0px", "padding-right": "0px"});
-	    	$(".project_row").css({"width": "100%", "padding-left": "0px", "padding-right": "0px"});
-	    	$(".main_pic").css({"width": "400px","height": "300px", "padding-left": "0px", "padding-right": "0px"});
+//	    	$(".gitbox5").removeClass("col-lg-12");
+//	    	$(".gitbox5").css({"width": "400px", "padding-left": "0px", "padding-right": "0px"});
+//	    	$(".project_row").css({"width": "100%", "padding-left": "0px", "padding-right": "0px"});
+//	    	$(".main_pic").css({"width": "400px","height": "300px", "padding-left": "0px", "padding-right": "0px"});
 			$(".a3content").css({"margin": "auto", "width": "auto"});
 	    	$(".a").css({"transform": "translateY(0px)", "-webkit-transform": "translateY(0px)", "-ms-transform": "translateY(0px)"});
 
