@@ -63,7 +63,7 @@
 								<div><%= image_tag("swift.png", :class => "about-icon speedy_icon") %></div>
 							</div>
 							<div class="about_title"> Speedy </div>
-							<div class="about_text"> Responsive desings with minimal load times </div>
+							<div class="about_text"> Responsive designs with minimal load times </div>
 						</div>
 						<div class=" about_group flex">
 							<div class="trapezoid slide_right">
@@ -132,7 +132,8 @@
 						--><div class="new_pj_bar npj2" data-filter=".ruby_on_rails"><div class="pj_title" data-filter=".ruby_on_rails">Ruby On Rails</div></div><!--  this is added to remove the space between in-line elements
 						--><div class="new_pj_bar npj3" data-filter=".reactjs"><div class="pj_title" data-filter=".reactjs">ReactJS</div></div><!-- this is added to remove the space between in-line elements
 						--><div class="new_pj_bar npj4" data-filter=".javascript"><div class="pj_title" data-filter=".javascript">JavaScript</div></div><!-- this is added to remove the space between in-line elements
-	 					--><div class="new_pj_bar_slider npj5"></div>
+	 					--><div class="new_pj_bar npj5" data-filter=".angular"><div class="pj_title" data-filter=".javascript">Angular</div></div><!-- this is added to remove the space between in-line elements
+	 					--><div class="new_pj_bar_slider npj6"></div>
 		
 					</div> 
 				</div>
@@ -178,6 +179,7 @@
 											    <li data-target=".picture_carousel" data-slide-to="0" class="active"></li>
 											    <li data-target=".picture_carousel" data-slide-to="1"></li>
 											    <li data-target=".picture_carousel" data-slide-to="2"></li>
+									
 											</ul>
 													
 											<div class="carousel-inner">
@@ -190,6 +192,7 @@
 											    <div class="carousel-item">
 											    	<%= image_tag project.pic3.url, style: 'height: auto; width: 100%;', :class => "pic3" %>
 											    </div>
+											    
 											    
 											    <!-- Left and right controls -->
 												<a class="carousel-control-prev" href="#picture_carousel<%= project.id %>" data-slide="prev">
