@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191027174108) do
+ActiveRecord::Schema.define(version: 20200125185925) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 20191027174108) do
     t.string "main_pic_content_type"
     t.integer "main_pic_file_size"
     t.datetime "main_pic_updated_at"
+    t.string "git_link"
   end
 
   create_table "skills", force: :cascade do |t|

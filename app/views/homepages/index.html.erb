@@ -219,10 +219,16 @@
 										<div class="container-fluid modal_cont">
 											<div class="row modal_cont_row">
 												<div class="col-sm-6 modal_cont_row_child">
-														<a class="
-														modal_atag>" href="<%= project.link %>">
+													<% if !project.link.nil? %>
+														<a class="modal_atag" href="<%= project.link %>">
+															<div class="modal_button">View Site</div>
+														</a>
+													<% end %>
+													<% if !project.git_link.nil? %>
+														<a class="modal_atag" href="<%= project.git_link %>">
 															<div class="modal_button">View Code</div>
 														</a>
+													<% end %>
 												</div>
 												<div class="col-sm-6 modal_cont_row_child2">
 											<!--		<div class='modal_bottom'>	-->
