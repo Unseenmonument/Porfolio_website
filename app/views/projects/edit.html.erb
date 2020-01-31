@@ -9,13 +9,17 @@
 
 	<br>
 	<%= f.file_field :main_pic %>
+	<p>delete main pic:   <%= f.check_box(:delete_main_pic) %> </p>
 	<br>
 	<br>
 	<%= f.file_field :pic1 %>
+	<p>delete pic1?:   <%= f.check_box(:delete_pic1) %> </p>
 	<br>
 	<%= f.file_field :pic2 %>
+	<p>delete pic2?:   <%= f.check_box(:delete_pic2) %> </p>
 	<br>
 	<%= f.file_field :pic3 %>
+	<p>delete pic3?:   <%= f.check_box(:delete_pic3) %> </p>
 	<br>
 	<%= f.submit 'Submit' %>
 <% end %>

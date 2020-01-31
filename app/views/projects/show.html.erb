@@ -6,10 +6,18 @@
 <div><%= @project.link %></div>
 
 <div><%= image_tag @project.main_pic.url, style: 'height: auto; width: 500px;' %></div>
-	
-<div><%= image_tag @project.pic1.url, style: 'height: auto; width: 500px;' %></div>
+
+<% if !@project.pic1.nil? %>	
+<%= image_tag @project.pic1.url, alt: '', style: 'height: auto; width: 500px;' %>
+<% end %>
+
+<% if !@project.pic2.nil? %>
 <div><%= image_tag @project.pic2.url, style: 'height: auto; width: 500px;' %></div>
+<% end %>
+
+<% if !@project.pic3.nil? %>
 <div><%= image_tag @project.pic3.url, style: 'height: auto; width: 500px;' %></div>
+<% end %>
 
 <!--	<%= image_tag @project.pic1.url(:medium) %>
 	<%= image_tag @project.pic1.url(:thumb) %>
@@ -34,9 +42,11 @@
 			<!-- The slideshow -->
 			<div class="born">
 				<div class="carousel-inner">
+					<% if !@project.pic1.nil? %>
 				    <div class="carousel-item active">
-				    	<%= image_tag @project.pic1.url, style: 'height: auto; width: 100%;', :class => "pic1" %>
+				    	<%= image_tag @project.pic1.url, alt: '', style: 'height: auto; width: 100%;', :class => "pic1" %>
 				    </div>
+				    <% end %>
 				    <div class="carousel-item">
 				    	<%= image_tag @project.pic2.url, style: 'height: auto; width: 100%;', :class => "pic2" %>
 				    </div>
@@ -54,3 +64,7 @@
 			    <span class="carousel-control-next-icon"></span>
 			</a>
 </div>
+<br>
+<br>
+<br>
+<br>
