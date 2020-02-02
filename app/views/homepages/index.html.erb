@@ -176,30 +176,42 @@
 										<div class="born">
 											<!-- Indicators -->
 											<ul class="carousel-indicators">
-											    <li data-target=".picture_carousel" data-slide-to="0" class="active"></li>
-											    <li data-target=".picture_carousel" data-slide-to="1"></li>
-											    <li data-target=".picture_carousel" data-slide-to="2"></li>
-									
+											    <% if project.pic1.to_s != "/images/original/missing.png" %>
+											    	<li data-target=".picture_carousel" data-slide-to="0" class="active"></li>
+											    <% end %>
+
+												<% if project.pic2.to_s != "/images/original/missing.png" %>
+											    	<li data-target=".picture_carousel" data-slide-to="1"></li>
+											    <% end %>
+
+											    <% if project.pic3.to_s != "/images/original/missing.png" %>
+											    	<li data-target=".picture_carousel" data-slide-to="2"></li>
+												<% end %>
 											</ul>
 													
 											<div class="carousel-inner">
-											    <div class="carousel-item active">
-											    	<%= image_tag project.pic1.url, style: 'height: auto; width: 100%;', :class => "pic1" %>
-											    </div>
-											    <div class="carousel-item">
-											    	<%= image_tag project.pic2.url, style: 'height: auto; width: 100%;', :class => "pic2" %>
-											    </div>
-											    <div class="carousel-item">
-											    	<%= image_tag project.pic3.url, style: 'height: auto; width: 100%;', :class => "pic3" %>
-											    </div>
-											    
+												<% if project.pic1.to_s != "/images/original/missing.png" %>
+											    	<div class="carousel-item active">
+											    		<%= image_tag project.pic1.url, style: 'height: auto; width: 100%;', :class => "pic1" %>
+											    	</div>
+											    <% end %>
+											    <% if project.pic2.to_s != "/images/original/missing.png" %>
+											    	<div class="carousel-item">
+											    		<%= image_tag project.pic2.url, style: 'height: auto; width: 100%;', :class => "pic2" %>
+											    	</div>
+											    <% end %>
+											    <% if project.pic3.to_s != "/images/original/missing.png" %>	
+											    	<div class="carousel-item">
+											    		<%= image_tag project.pic3.url, style: 'height: auto; width: 100%;', :class => "pic3" %>
+											    	</div>
+											    <% end %>
 											    
 											    <!-- Left and right controls -->
 												<a class="carousel-control-prev" href="#picture_carousel<%= project.id %>" data-slide="prev">
-												    <span class="carousel-control-prev-icon"></span>
+												    <span class="carousel-control-prev-icon" style="filter: invert(100%)"></span>
 												</a>
 												<a class="carousel-control-next" href="#picture_carousel<%= project.id %>" data-slide="next">
-												    <span class="carousel-control-next-icon"></span>
+												    <span class="carousel-control-next-icon" style="filter: invert(100%)"></span>
 												</a>
 
 											</div>

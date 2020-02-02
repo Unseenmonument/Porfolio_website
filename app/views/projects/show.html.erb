@@ -5,18 +5,28 @@
 <div><%= @project.blurb %></div>
 <div><%= @project.link %></div>
 
-<div><%= image_tag @project.main_pic.url, style: 'height: auto; width: 500px;' %></div>
-
-<% if !@project.pic1.nil? %>	
-<%= image_tag @project.pic1.url, alt: '', style: 'height: auto; width: 500px;' %>
+<% if @project.pic2.to_s != "/images/original/missing.png" %>
+	<div><%= image_tag @project.main_pic.url, style: 'height: auto; width: 500px;' %></div>
+<% else %>
+	<p> this sucks, the main picture is missing</p>
 <% end %>
 
-<% if !@project.pic2.nil? %>
-<div><%= image_tag @project.pic2.url, style: 'height: auto; width: 500px;' %></div>
+<% if @project.pic1.to_s != "/images/original/missing.png" %>
+	<div><%= image_tag @project.pic1.url, alt: '', style: 'height: auto; width: 500px;' %></div>
+<% else %>
+	<p>this sucks, pic1 is missing</p>
 <% end %>
 
-<% if !@project.pic3.nil? %>
-<div><%= image_tag @project.pic3.url, style: 'height: auto; width: 500px;' %></div>
+<% if @project.pic2.to_s != "/images/original/missing.png" %>
+	<div><%= image_tag @project.pic2.url, style: 'height: auto; width: 500px;' %></div>
+<% else %>
+	<p> this sucks, pic2 is missing </p>
+<% end %>
+
+<% if @project.pic3.to_s != "/images/original/missing.png" %>
+	<div><%= image_tag @project.pic3.url, style: 'height: auto; width: 500px;' %></div>
+<% else %>
+	<p> this sucks, pic3 is missing </p>
 <% end %>
 
 <!--	<%= image_tag @project.pic1.url(:medium) %>
@@ -34,25 +44,37 @@
 
 			<!-- Indicators -->
 			<ul class="carousel-indicators">
-			    <li data-target="#demo" data-slide-to="0" class="active"></li>
-			    <li data-target="#demo" data-slide-to="1"></li>
-			    <li data-target="#demo" data-slide-to="2"></li>
+				<% if @project.pic1.to_s != "/images/original/missing.png" %>
+				    <li data-target="#demo" data-slide-to="0" class="active"></li>
+				<% end %>
+
+				<% if @project.pic2.to_s != "/images/original/missing.png" %>
+			    	<li data-target="#demo" data-slide-to="1"></li>
+			    <% end %>
+
+			    <% if @project.pic3.to_s != "/images/original/missing.png" %>
+			    	<li data-target="#demo" data-slide-to="2"></li>
+			    <% end %>
 			</ul>
 								  
 			<!-- The slideshow -->
 			<div class="born">
 				<div class="carousel-inner">
-					<% if !@project.pic1.nil? %>
-				    <div class="carousel-item active">
-				    	<%= image_tag @project.pic1.url, alt: '', style: 'height: auto; width: 100%;', :class => "pic1" %>
-				    </div>
+					<% if @project.pic1.to_s != "/images/original/missing.png" %>
+					    <div class="carousel-item active">
+					    	<%= image_tag @project.pic1.url, alt: '', style: 'height: auto; width: 100%;', :class => "pic1" %>
+					    </div>
 				    <% end %>
-				    <div class="carousel-item">
-				    	<%= image_tag @project.pic2.url, style: 'height: auto; width: 100%;', :class => "pic2" %>
-				    </div>
-				    <div class="carousel-item">
-				    	<%= image_tag @project.pic3.url, style: 'height: auto; width: 100%;', :class => "pic3" %>
-				    </div>
+				    <% if @project.pic2.to_s != "/images/original/missing.png" %>
+					    <div class="carousel-item">
+					    	<%= image_tag @project.pic2.url, style: 'height: auto; width: 100%;', :class => "pic2" %>
+					    </div>
+				    <% end %>
+				    <% if @project.pic3.to_s != "/images/original/missing.png" %>
+					    <div class="carousel-item">
+					    	<%= image_tag @project.pic3.url, style: 'height: auto; width: 100%;', :class => "pic3" %>
+					    </div>
+				    <% end %>
 				</div>
 			</div>
 								  

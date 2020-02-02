@@ -17,6 +17,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    puts @project.pic3.to_s
   end
 
   def update
