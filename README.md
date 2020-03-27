@@ -59,7 +59,12 @@ This is a web app created so that I can display my skills and upload pictures of
 
 * Deployment instructions
 
-	This app was pushed to production via Heroku, using Amazon Web Services to host the database.
+	This app was pushed to production via Heroku, and using Amazon Web Services to host the database.
+
+	Heroku version:
+
+		heroku/7.37.0 win32-x64 node-v12.13.0
+
 
 	Gem(s) Needed for Deployment:
 
