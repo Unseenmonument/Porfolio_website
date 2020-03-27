@@ -5,10 +5,24 @@
 This is a web app created so that I can display my skills and upload pictures of projects I have spent my time coding.
 
 
+* Your order of installation should look something like this:
+
+	1: Install Ruby
+
+	2: Install Rails
+
+	3: Postgress
+
+	4: Heroku
+	
+	5: All necessary gems listed below. Installed once Rails is up and runnng.
+
+
 
 * Ruby version
 
 	Built using Ruby v2.4.9p362
+
 
 * System dependencies
 	
@@ -44,18 +58,23 @@ This is a web app created so that I can display my skills and upload pictures of
 	'pg'
 	'node', '~> 1.0'	
 
+
 * Database creation
 
 	Database created with Postgres version 12
+
 
 * Database initialization
 
 	N/A
 	
+
 * How to run the test suite
 	N/A
 
+
 * Services (job queues, cache servers, search engines, etc.)
+
 
 * Deployment instructions
 
@@ -64,7 +83,6 @@ This is a web app created so that I can display my skills and upload pictures of
 	Heroku version:
 
 		heroku/7.37.0 win32-x64 node-v12.13.0
-
 
 	Gem(s) Needed for Deployment:
 
